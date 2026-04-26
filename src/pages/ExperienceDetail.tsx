@@ -1,6 +1,6 @@
 import { Link, useParams, Navigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { Clock, MapPin, TrendingUp, Heart, Check, ArrowLeft, Users, Languages, PawPrint, Calendar, Thermometer, ExternalLink } from "lucide-react";
+import { Clock, MapPin, TrendingUp, Heart, Check, X, ArrowLeft, Users, Languages, PawPrint, Calendar, Thermometer, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Seo } from "@/components/Seo";
 import { ExperienceCard } from "@/components/ExperienceCard";
@@ -162,6 +162,22 @@ export default function ExperienceDetail() {
                   <li key={item} className="flex items-start gap-3">
                     <span className="mt-1 inline-flex h-6 w-6 items-center justify-center rounded-full bg-leaf/15 text-leaf shrink-0">
                       <Check className="h-3.5 w-3.5" />
+                    </span>
+                    <span className="text-foreground/90">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+
+          {e.details?.notIncluded && (
+            <div>
+              <h2 className="text-3xl mb-4">{t("experience.notIncluded")}</h2>
+              <ul className="grid sm:grid-cols-2 gap-3">
+                {e.details.notIncluded[lang].map(item => (
+                  <li key={item} className="flex items-start gap-3">
+                    <span className="mt-1 inline-flex h-6 w-6 items-center justify-center rounded-full bg-destructive/10 text-destructive shrink-0">
+                      <X className="h-3.5 w-3.5" />
                     </span>
                     <span className="text-foreground/90">{item}</span>
                   </li>
