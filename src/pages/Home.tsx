@@ -14,7 +14,10 @@ export default function Home() {
   const { t } = useTranslation();
   const lang = useLang();
   const lp = useLocalizedPath();
-  const featured = EXPERIENCES.filter(e => ["amazonas-4-dias","inmersion-wayuu-4-dias","ciudad-perdida-4-dias","tour-cafe-antioquia","guatape-penol","tour-la-perse"].includes(e.slug));
+  const featuredSlugs = ["cocuy-3-dias","ciudad-perdida-5-dias","inmersion-wayuu-4-dias","amazonas-6-dias","guaviare-5-dias","chingaza"];
+  const featured = featuredSlugs
+    .map(slug => EXPERIENCES.find(e => e.slug === slug))
+    .filter((e): e is NonNullable<typeof e> => Boolean(e));
   const steps = t("home.howSteps", { returnObjects: true }) as { title: string; body: string }[];
   const stepIcons = [Compass, Sparkles, MessageCircle];
 
