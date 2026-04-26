@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { ArrowRight, Compass, MessageCircle, Sparkles } from "lucide-react";
-import heroImg from "@/assets/hero-colombia.jpg";
+const heroImg = "https://i.pinimg.com/1200x/01/cd/cc/01cdcc6084bdc4cf92c8a15d870a0a6a.jpg";
 import { Button } from "@/components/ui/button";
 import { ExperienceCard } from "@/components/ExperienceCard";
 import { CTASection } from "@/components/CTASection";
