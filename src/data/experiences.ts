@@ -466,6 +466,72 @@ export const EXPERIENCES: Experience[] = [
     insights: { es: ["5 días en la Sierra", "Ritmo contemplativo", "Mayor tiempo en Teyuna", "Comunidades Kogui"], en: ["5 days in the Sierra", "Contemplative pace", "More time at Teyuna", "Kogui communities"] },
     impact: { es: "Apoyo extendido a comunidades indígenas de la Sierra Nevada.", en: "Extended support to Sierra Nevada indigenous communities." },
     image: "https://i.pinimg.com/1200x/bf/28/d6/bf28d6d17e73b1768b7bd70f994d7aff.jpg",
+    details: {
+      about: {
+        es: "Hay algo raro que pasa cuando te metes en la Sierra Nevada: el tiempo deja de importar. Empiezas caminando con la idea de \"hacer un trekking\", pero rápido entiendes que esto no va de kilómetros… aunque sí, son casi 60 en total. Va de lo que te pasa mientras avanzas. Sudas, te cansas, te ríes con gente que no conocías hace dos días, te metes a un río helado sin pensarlo mucho… y todo empieza a sentirse más simple, más puro.\n\nDurante cinco días te metes en una selva que está viva de verdad. No es paisaje, es presencia. Caminas entre montañas, cruzas ríos una y otra vez, duermes con el sonido constante de la naturaleza y te desconectas de todo lo que normalmente te ocupa la cabeza.\n\nLa ruta sigue el mismo camino hacia Ciudad Perdida que el tour clásico de 4 días. El tercer día pasa lo soñado: subes por 1.200 escaleras de piedra que parecen no terminar… y de repente estás ahí. Ciudad Perdida. Sin ruido, sin filtros. Solo tú, la selva y un lugar que lleva siglos ahí, mucho antes de que todo lo demás existiera.\n\nPero acá es donde este viaje cambia. Cuando la mayoría empieza a devolverse, tú sigues. El cuarto día tomas un desvío fuera de la ruta tradicional. Te metes por zonas menos transitadas, pasas por cascadas, por comunidades campesinas y rincones donde casi no hay nadie. No es una versión más suave, es más inmersiva. Más tiempo en la Sierra, más contacto real.\n\nNo es fácil. Hay días largos, calor, humedad, cansancio real. Pero justo por eso vale más. Porque te lo ganas. Ciudad Perdida no es un plan bonito. Es una experiencia que te mueve cosas.",
+        en: "Something strange happens when you go into the Sierra Nevada: time stops mattering. You start walking thinking you'll just \"do a trek,\" but you quickly understand this isn't about kilometers… although yes, it's almost 60 total. It's about what happens to you as you go. You sweat, you tire, you laugh with people you didn't know two days ago, you jump into an icy river without thinking… and everything starts to feel simpler, purer.\n\nFor five days you step into a jungle that's truly alive. It's not scenery, it's presence. You walk between mountains, cross rivers over and over, sleep to the constant sound of nature and disconnect from everything that usually fills your head.\n\nThe route follows the same path to the Lost City as the classic 4-day tour. On the third day the dream happens: you climb 1,200 stone steps that seem endless… and suddenly you're there. Ciudad Perdida. No noise, no filters. Just you, the jungle and a place that's been there for centuries, long before everything else existed.\n\nBut this is where the trip changes. When most start heading back, you keep going. On the fourth day you take a detour off the traditional route. You head into less-traveled areas, past waterfalls, peasant communities and corners where almost no one goes. It's not a softer version — it's more immersive. More time in the Sierra, more real contact.\n\nIt's not easy. Long days, heat, humidity, real exhaustion. But that's exactly why it's worth more. Because you earn it. Ciudad Perdida isn't a pretty plan. It's an experience that moves things in you.",
+      },
+      difficultyNote: {
+        es: "Caminatas diarias entre 10 y 18 kilómetros en subida. Buena condición física requerida.",
+        en: "Daily hikes of 10 to 18 km uphill. Good physical condition required.",
+      },
+      includes: {
+        es: [
+          "Alimentación completa",
+          "Alojamiento en camarotes con toldillo (opción de hamacas disponible)",
+          "Guías locales expertos en montaña",
+          "Traslados Santa Marta – El Mamey – Santa Marta",
+          "Ingreso al Parque Arqueológico Teyuna – Ciudad Perdida",
+          "Seguro de asistencia médica",
+          "Almacenamiento de equipaje extra para subir lo más ligero posible",
+        ],
+        en: [
+          "Full meal plan",
+          "Lodging in bunks with mosquito nets (hammock option available)",
+          "Expert local mountain guides",
+          "Transfers Santa Marta – El Mamey – Santa Marta",
+          "Entrance to Teyuna – Lost City Archaeological Park",
+          "Medical assistance insurance",
+          "Extra luggage storage so you climb as light as possible",
+        ],
+      },
+      meetingPoint: {
+        es: "Recogida en hoteles del centro histórico o en la oficina en el centro histórico de Santa Marta",
+        en: "Pickup at historic-center hotels or at our office in the historic center of Santa Marta",
+      },
+      startTime: "08:15",
+      recommendations: {
+        es: [
+          "Un morral ligero y cómodo",
+          "Botas de trekking o tenis con buen agarre",
+          "Llevar mínimo 4 pares de medias o calcetines",
+          "Toalla",
+          "Traje de baño",
+          "Repelente con DEET o natural",
+          "Bloqueador solar + gorra o sombrero",
+          "Botella de agua reutilizable",
+          "Bolsa de plástico hermética para que no se mojen tus cosas",
+          "Documento de identidad",
+        ],
+        en: [
+          "A light, comfortable backpack",
+          "Trekking boots or shoes with good grip",
+          "Bring at least 4 pairs of socks",
+          "Towel",
+          "Swimwear",
+          "Repellent with DEET or natural",
+          "Sunscreen + cap or hat",
+          "Reusable water bottle",
+          "Sealed plastic bag to keep your things dry",
+          "ID document",
+        ],
+      },
+      arrivalTips: {
+        es: "Se recomienda llegar la noche anterior, descansados y puntuales. Llevar solo lo necesario y lo más ligero posible. Si se necesita, podemos guardar el equipaje extra sin costo y con seguridad.",
+        en: "We recommend arriving the night before, well rested and on time. Bring only what's necessary and as light as possible. If needed, we can store extra luggage at no cost and securely.",
+      },
+      cancellation: { es: "Moderada", en: "Moderate" },
+    },
   },
   // ---------------- MEDELLÍN ----------------
   {
