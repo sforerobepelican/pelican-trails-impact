@@ -39,6 +39,34 @@ export interface Experience {
   insights: { es: string[]; en: string[] };
   impact: { es: string; en: string };
   image: string;
+  details?: ExperienceDetails;
+}
+
+export interface ItineraryDay {
+  title: { es: string; en: string };
+  body: { es: string[]; en: string[] };
+}
+
+export interface ExperienceDetails {
+  about?: { es: string; en: string };
+  difficultyNote?: { es: string; en: string };
+  maxPeople?: number;
+  languages?: { es: string; en: string };
+  petsAllowed?: boolean;
+  itinerary?: ItineraryDay[];
+  includes?: { es: string[]; en: string[] };
+  meetingPoint?: { es: string; en: string };
+  meetingPointMapUrl?: string;
+  endingPoint?: { es: string; en: string };
+  startTime?: string;
+  flexibleSchedule?: boolean;
+  recommendations?: { es: string[]; en: string[] };
+  arrivalTips?: { es: string; en: string };
+  cancellation?: { es: string; en: string };
+  climate?: {
+    temperature?: { es: string; en: string };
+    bestSeason?: { es: string; en: string };
+  };
 }
 
 export const ZONES: Record<ZoneId, { name: { es: string; en: string }; pitch: { es: string; en: string } }> = {
@@ -298,6 +326,105 @@ export const EXPERIENCES: Experience[] = [
     },
     impact: { es: "El plan se construyó con la comunidad Ulishamana — los ingresos apoyan su escuela.", en: "Built with the Ulishamana community — revenue supports their school." },
     image: "https://i.pinimg.com/1200x/c8/83/ab/c883ab9e63b1937ffb72b50a02ef8c2c.jpg",
+    details: {
+      about: {
+        es: "Existe un rincón del mundo donde el desierto se derrama sobre el Caribe, donde el viento no ha parado en siglos y donde el tiempo funciona distinto. La Guajira de este viaje no es la que aparece en las búsquedas. Es la que se siente cuando una mujer Wayúu enseña a tejer sin que nadie se lo haya pedido, cuando el sol tiñe de naranja una tierra que parece de otro planeta, cuando te das cuenta de que llevas horas sin mirar el teléfono y no te importa en lo absoluto. No es un viaje que se planea para contarlo. Es uno que se lleva adentro mucho después de haber vuelto.",
+        en: "There's a corner of the world where the desert spills into the Caribbean, where the wind hasn't stopped in centuries and where time works differently. The Guajira of this trip is not the one that shows up in searches. It's the one you feel when a Wayúu woman teaches you to weave without anyone asking, when the sun turns an otherworldly land orange, when you realize you've gone hours without checking your phone and don't care at all. It's not a trip you plan to talk about. It's one you carry inside long after returning.",
+      },
+      difficultyNote: { es: "Baja", en: "Low" },
+      maxPeople: 15,
+      itinerary: [
+        {
+          title: { es: "Día 1 — El día que Ulishamana abre sus puertas", en: "Day 1 — The day Ulishamana opens its doors" },
+          body: {
+            es: [
+              "El viaje empieza desde que suben a la camioneta. Una 4x4 los recoge en el aeropuerto y desde ese momento el ritmo cambia. Antes de salir de la ciudad, tienen tiempo para abastecerse de productos de aseo o lo que necesiten para viajar cómodos.",
+              "Después, el asfalto se vuelve polvo y el polvo se vuelve desierto. El primer destino es Ulishamana: una comunidad Wayúu que no recibe a cualquier visitante. No es un set turístico ni una recreación cultural. Es una comunidad real, viva, que ha elegido abrirles sus puertas de forma exclusiva. No hay otro grupo, solo la comunidad y lo que ese día tenga para ofrecer: taller de tejido, pintura facial tradicional con su significado, el toque de la Yonna y una cata de Yotshi, el licor sagrado Wayúu, una manta Wayúu para las mujeres y un sombrero típico para los hombres.",
+              "Todo lo que vivan ahí tiene siglos de historia detrás y debe ser recibido con la misma seriedad con que se ofrece. El día termina con almuerzo y cena típica de la región, pescado fresco de temporada. Si hay alguna restricción alimentaria, se coordina con anticipación.",
+            ],
+            en: [
+              "The trip starts the moment you get in the truck. A 4x4 picks you up at the airport and from then on the pace changes. Before leaving the city you have time to stock up on toiletries or whatever you need to travel comfortably.",
+              "Then asphalt turns to dust, and dust turns to desert. The first destination is Ulishamana: a Wayúu community that doesn't host just anyone. It's not a tourist set or a cultural recreation. It's a real, living community that has chosen to open its doors exclusively to you. No other group — just the community and what the day brings: a weaving workshop, traditional face painting with its meaning, the rhythm of the Yonna dance and a Yotshi tasting (the sacred Wayúu liquor), a Wayúu manta for the women and a traditional hat for the men.",
+              "Everything you live there carries centuries of history and must be received with the same seriousness with which it is offered. The day ends with lunch and a typical regional dinner — fresh seasonal fish. Any dietary restrictions are coordinated in advance.",
+            ],
+          },
+        },
+        {
+          title: { es: "Día 2 — Siendo Wayúu, sin más", en: "Day 2 — Being Wayúu, simply" },
+          body: {
+            es: [
+              "El desayuno no tiene afán. Un chinchorro, la enramada, el sonido del viento y una conversación que solo puede darse cuando eres parte de la comunidad. Las personas están ahí para responder lo que el día anterior no se pudo contestar.",
+              "Si el viaje es entre semana, hay posibilidad de visitar la escuela de la comunidad. Se llevan refrigerios para los niños y se acompañan las clases con los profesores. Los fines de semana la escuela no abre, pero la ranchería sigue viva con sus propias rutinas, y los refrigerios se reparten ahí, entre los niños de la comunidad. Es uno de esos momentos que no estaba en ningún plan pero que termina siendo el más recordado.",
+              "Sobre el mediodía, cuando ya el sol pega fuerte y la comunidad retoma su ritmo, llega el momento de agradecer y seguir. La camioneta los espera. En el camino se almuerza en Uribia, capital indígena de Colombia. Y si el clima y la ruta lo permiten, llegar justo a tiempo para ver cómo el sol cae sobre el mar desde el balcón de la habitación frente al mar.",
+              "En la noche: cena de bienvenida con langosta de pesca local. Y después, cuando los platos se recogen y el ruido del día se apaga, una fogata frente al mar. De un lado el fuego, del otro el Caribe.",
+            ],
+            en: [
+              "Breakfast has no rush. A chinchorro hammock, the enramada shade, the sound of the wind and a conversation that can only happen when you're part of the community. People are there to answer what the previous day couldn't.",
+              "If the trip is on a weekday, there's a chance to visit the community school. You bring snacks for the children and join classes with the teachers. On weekends the school is closed, but the ranchería is still alive with its own routines, and snacks are shared there, among the community children. It's one of those moments that wasn't on any itinerary but ends up being the most remembered.",
+              "Around midday, when the sun hits hard and the community returns to its rhythm, it's time to give thanks and move on. The truck is waiting. On the way you'll have lunch in Uribia, indigenous capital of Colombia. And if the weather and route allow, you'll arrive just in time to watch the sun fall over the sea from the balcony of your oceanfront room.",
+              "At night: welcome dinner with locally caught lobster. And afterward, when the plates are cleared and the day's noise fades, a bonfire facing the sea. On one side, fire. On the other, the Caribbean.",
+            ],
+          },
+        },
+        {
+          title: { es: "Día 3 — Jepirra: el lugar donde los vivos entienden a los que ya no están", en: "Day 3 — Jepirra: where the living understand those who are gone" },
+          body: {
+            es: [
+              "Hay lugares que se entienden solo cuando se está parado en ellos. El Pilón de Azúcar es uno de esos. En quince minutos de subida llegan a una vista de 360 grados sobre el Cabo: de un lado, el mar que golpea fuerte contra las rocas; del otro, una calma que parece no pertenecer al mismo océano.",
+              "Para el pueblo Wayúu, este lugar no es solo paisaje. El Cabo de la Vela es Jepirra, el destino final de las almas. Según su cosmología, cuando alguien muere, su espíritu camina hasta aquí, hasta este punto donde la tierra se acaba y el mar empieza, para hacer su último viaje. Es el umbral entre este mundo y el siguiente. Por eso el viento nunca para. Por eso el mar golpea así.",
+              "La tarde es más libre. Almuerzo a elección propia en el pueblo, el guía tiene sus recomendaciones, pero la decisión es de ustedes. Después, la camioneta los lleva al Mirador Tortuga y a Playa Ojo de Agua: tiempo para caminar, fotografiar, sentarse. El día cierra en el faro, esperando el atardecer. Cuando el sol baja y el faro enciende, se van al hotel. Cena frente al mar con mero de temporada.",
+            ],
+            en: [
+              "Some places you only understand by standing in them. Pilón de Azúcar is one. A 15-minute climb takes you to a 360° view over the Cabo: on one side, the sea pounding the rocks; on the other, a stillness that doesn't seem to belong to the same ocean.",
+              "For the Wayúu, this place is not just scenery. Cabo de la Vela is Jepirra, the final destination of souls. According to their cosmology, when someone dies their spirit walks here, to this point where land ends and sea begins, to make its final journey. It is the threshold between this world and the next. That's why the wind never stops. That's why the sea hits like that.",
+              "The afternoon is freer. Lunch of your choice in the village — the guide has recommendations, but the decision is yours. Afterward the truck takes you to Mirador Tortuga and Playa Ojo de Agua: time to walk, photograph, sit. The day closes at the lighthouse, waiting for sunset. When the sun drops and the lighthouse lights, you head back to the hotel. Dinner facing the sea with seasonal grouper.",
+            ],
+          },
+        },
+        {
+          title: { es: "Día 4 — La sal de la tierra y el sabor de lo que fuiste", en: "Day 4 — The salt of the earth and the taste of who you were" },
+          body: {
+            es: ["Día de cierre con visita a Manaure y los flamencos rosados, regreso al aeropuerto y despedida."],
+            en: ["Closing day with a visit to Manaure and the pink flamingos, return to the airport and farewell."],
+          },
+        },
+      ],
+      flexibleSchedule: true,
+      climate: {
+        temperature: { es: "Entre 27 °C y 32 °C", en: "Between 27 °C and 32 °C" },
+        bestSeason: {
+          es: "La mejor época para viajar es de diciembre a abril, cuando las lluvias prácticamente desaparecen y el cielo se mantiene despejado. De mayo a noviembre hay presencia de lluvias ocasionales. El viento fuerte es una constante en el Cabo de la Vela en cualquier época y hace parte de la experiencia.",
+          en: "The best time to travel is December to April, when rains practically disappear and the sky stays clear. From May to November there are occasional rains. Strong wind is a constant at Cabo de la Vela in any season and is part of the experience.",
+        },
+      },
+      recommendations: {
+        es: [
+          "Ropa ligera y de colores claros. El sol pega fuerte desde temprano",
+          "Protector solar de alta protección y gafas de sol; el reflejo en el desierto y el agua es intenso",
+          "Sombrero o gorra, imprescindible durante el día",
+          "Repelente de insectos para las noches",
+          "Calzado cómodo para caminar en arena y terreno irregular",
+          "Ropa de baño y toalla",
+          "Efectivo en pesos colombianos. No hay cajeros en el Cabo de la Vela ni en la zona del desierto",
+          "Mente abierta y disposición para conectar. Las comunidades que se visitan merecen presencia real, no solo una cámara",
+        ],
+        en: [
+          "Light, light-colored clothing. The sun hits hard from early on",
+          "High-protection sunscreen and sunglasses; the glare on desert and water is intense",
+          "Hat or cap, essential during the day",
+          "Insect repellent for the nights",
+          "Comfortable footwear for sand and uneven terrain",
+          "Swimwear and towel",
+          "Cash in Colombian pesos. There are no ATMs at Cabo de la Vela or in the desert zone",
+          "Open mind and willingness to connect. The communities you visit deserve real presence, not just a camera",
+        ],
+      },
+      arrivalTips: {
+        es: "Una vez sepas del vuelo, avísanos para coordinar la recogida saliendo del aeropuerto.",
+        en: "Once you know your flight, let us know so we can coordinate pickup at the airport exit.",
+      },
+      cancellation: { es: "Flexible", en: "Flexible" },
+    },
   },
   // ---------------- SANTA MARTA ----------------
   {
@@ -339,6 +466,72 @@ export const EXPERIENCES: Experience[] = [
     insights: { es: ["5 días en la Sierra", "Ritmo contemplativo", "Mayor tiempo en Teyuna", "Comunidades Kogui"], en: ["5 days in the Sierra", "Contemplative pace", "More time at Teyuna", "Kogui communities"] },
     impact: { es: "Apoyo extendido a comunidades indígenas de la Sierra Nevada.", en: "Extended support to Sierra Nevada indigenous communities." },
     image: "https://i.pinimg.com/1200x/bf/28/d6/bf28d6d17e73b1768b7bd70f994d7aff.jpg",
+    details: {
+      about: {
+        es: "Hay algo raro que pasa cuando te metes en la Sierra Nevada: el tiempo deja de importar. Empiezas caminando con la idea de \"hacer un trekking\", pero rápido entiendes que esto no va de kilómetros… aunque sí, son casi 60 en total. Va de lo que te pasa mientras avanzas. Sudas, te cansas, te ríes con gente que no conocías hace dos días, te metes a un río helado sin pensarlo mucho… y todo empieza a sentirse más simple, más puro.\n\nDurante cinco días te metes en una selva que está viva de verdad. No es paisaje, es presencia. Caminas entre montañas, cruzas ríos una y otra vez, duermes con el sonido constante de la naturaleza y te desconectas de todo lo que normalmente te ocupa la cabeza.\n\nLa ruta sigue el mismo camino hacia Ciudad Perdida que el tour clásico de 4 días. El tercer día pasa lo soñado: subes por 1.200 escaleras de piedra que parecen no terminar… y de repente estás ahí. Ciudad Perdida. Sin ruido, sin filtros. Solo tú, la selva y un lugar que lleva siglos ahí, mucho antes de que todo lo demás existiera.\n\nPero acá es donde este viaje cambia. Cuando la mayoría empieza a devolverse, tú sigues. El cuarto día tomas un desvío fuera de la ruta tradicional. Te metes por zonas menos transitadas, pasas por cascadas, por comunidades campesinas y rincones donde casi no hay nadie. No es una versión más suave, es más inmersiva. Más tiempo en la Sierra, más contacto real.\n\nNo es fácil. Hay días largos, calor, humedad, cansancio real. Pero justo por eso vale más. Porque te lo ganas. Ciudad Perdida no es un plan bonito. Es una experiencia que te mueve cosas.",
+        en: "Something strange happens when you go into the Sierra Nevada: time stops mattering. You start walking thinking you'll just \"do a trek,\" but you quickly understand this isn't about kilometers… although yes, it's almost 60 total. It's about what happens to you as you go. You sweat, you tire, you laugh with people you didn't know two days ago, you jump into an icy river without thinking… and everything starts to feel simpler, purer.\n\nFor five days you step into a jungle that's truly alive. It's not scenery, it's presence. You walk between mountains, cross rivers over and over, sleep to the constant sound of nature and disconnect from everything that usually fills your head.\n\nThe route follows the same path to the Lost City as the classic 4-day tour. On the third day the dream happens: you climb 1,200 stone steps that seem endless… and suddenly you're there. Ciudad Perdida. No noise, no filters. Just you, the jungle and a place that's been there for centuries, long before everything else existed.\n\nBut this is where the trip changes. When most start heading back, you keep going. On the fourth day you take a detour off the traditional route. You head into less-traveled areas, past waterfalls, peasant communities and corners where almost no one goes. It's not a softer version — it's more immersive. More time in the Sierra, more real contact.\n\nIt's not easy. Long days, heat, humidity, real exhaustion. But that's exactly why it's worth more. Because you earn it. Ciudad Perdida isn't a pretty plan. It's an experience that moves things in you.",
+      },
+      difficultyNote: {
+        es: "Caminatas diarias entre 10 y 18 kilómetros en subida. Buena condición física requerida.",
+        en: "Daily hikes of 10 to 18 km uphill. Good physical condition required.",
+      },
+      includes: {
+        es: [
+          "Alimentación completa",
+          "Alojamiento en camarotes con toldillo (opción de hamacas disponible)",
+          "Guías locales expertos en montaña",
+          "Traslados Santa Marta – El Mamey – Santa Marta",
+          "Ingreso al Parque Arqueológico Teyuna – Ciudad Perdida",
+          "Seguro de asistencia médica",
+          "Almacenamiento de equipaje extra para subir lo más ligero posible",
+        ],
+        en: [
+          "Full meal plan",
+          "Lodging in bunks with mosquito nets (hammock option available)",
+          "Expert local mountain guides",
+          "Transfers Santa Marta – El Mamey – Santa Marta",
+          "Entrance to Teyuna – Lost City Archaeological Park",
+          "Medical assistance insurance",
+          "Extra luggage storage so you climb as light as possible",
+        ],
+      },
+      meetingPoint: {
+        es: "Recogida en hoteles del centro histórico o en la oficina en el centro histórico de Santa Marta",
+        en: "Pickup at historic-center hotels or at our office in the historic center of Santa Marta",
+      },
+      startTime: "08:15",
+      recommendations: {
+        es: [
+          "Un morral ligero y cómodo",
+          "Botas de trekking o tenis con buen agarre",
+          "Llevar mínimo 4 pares de medias o calcetines",
+          "Toalla",
+          "Traje de baño",
+          "Repelente con DEET o natural",
+          "Bloqueador solar + gorra o sombrero",
+          "Botella de agua reutilizable",
+          "Bolsa de plástico hermética para que no se mojen tus cosas",
+          "Documento de identidad",
+        ],
+        en: [
+          "A light, comfortable backpack",
+          "Trekking boots or shoes with good grip",
+          "Bring at least 4 pairs of socks",
+          "Towel",
+          "Swimwear",
+          "Repellent with DEET or natural",
+          "Sunscreen + cap or hat",
+          "Reusable water bottle",
+          "Sealed plastic bag to keep your things dry",
+          "ID document",
+        ],
+      },
+      arrivalTips: {
+        es: "Se recomienda llegar la noche anterior, descansados y puntuales. Llevar solo lo necesario y lo más ligero posible. Si se necesita, podemos guardar el equipaje extra sin costo y con seguridad.",
+        en: "We recommend arriving the night before, well rested and on time. Bring only what's necessary and as light as possible. If needed, we can store extra luggage at no cost and securely.",
+      },
+      cancellation: { es: "Moderada", en: "Moderate" },
+    },
   },
   // ---------------- MEDELLÍN ----------------
   {
@@ -457,6 +650,48 @@ export const EXPERIENCES: Experience[] = [
     insights: { es: ["Calle de los abrazos", "Cata de chicha", "Monumento del silencio", "Guías locales"], en: ["Street of hugs", "Chicha tasting", "Monument of silence", "Local guides"] },
     impact: { es: "Guías de La Perse cuentan su propia historia y reciben ingresos directos.", en: "La Perse guides tell their own story and receive direct income." },
     image: "https://images.unsplash.com/photo-1568632234167-789922ea3cc4?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=1600",
+    details: {
+      about: {
+        es: "Hay barrios que se visitan. Y hay barrios que se sienten. La Perseverancia es de los segundos.",
+        en: "There are neighborhoods you visit. And there are neighborhoods you feel. La Perseverancia is one of the second kind.",
+      },
+      difficultyNote: { es: "Baja — son cuadras empinadas, pero el recorrido es pausado.", en: "Low — the streets are steep, but the pace is unhurried." },
+      maxPeople: 20,
+      languages: { es: "Español, Inglés", en: "Spanish, English" },
+      includes: {
+        es: [
+          "Guía local experto en historia urbana y procesos comunitarios",
+          "Acompañamiento permanente durante todo el recorrido",
+          "Degustación de chicha tradicional",
+          "Snack",
+          "Experiencia sensorial guiada en las Torres del Silencio",
+          "Encuentros con líderes y habitantes del barrio",
+          "Interpretación cultural, histórica y social del territorio",
+          "Aporte directo a la economía comunitaria y a los anfitriones locales",
+          "Seguro de asistencia básica durante la experiencia",
+        ],
+        en: [
+          "Local guide expert in urban history and community processes",
+          "Continuous accompaniment throughout the tour",
+          "Traditional chicha tasting",
+          "Snack",
+          "Guided sensory experience at the Towers of Silence",
+          "Encounters with neighborhood leaders and residents",
+          "Cultural, historical and social interpretation of the territory",
+          "Direct contribution to the community economy and local hosts",
+          "Basic assistance insurance during the experience",
+        ],
+      },
+      meetingPoint: { es: "Museo Nacional de Colombia", en: "Museo Nacional de Colombia" },
+      meetingPointMapUrl: "https://maps.google.com/?q=Museo+Nacional+de+Colombia+Bogota",
+      endingPoint: {
+        es: "Puede ser en Calle Bonita, en la Plaza de Mercado de La Perseverancia o en el punto de inicio (Museo Nacional de Colombia).",
+        en: "Can be at Calle Bonita, at the La Perseverancia Market Square, or at the starting point (Museo Nacional de Colombia).",
+      },
+      flexibleSchedule: true,
+      arrivalTips: { es: "Ubicarse frente a la puerta principal del Museo Nacional.", en: "Meet at the main entrance of the Museo Nacional." },
+      cancellation: { es: "Flexible", en: "Flexible" },
+    },
   },
   {
     slug: "graffiti-tour-candelaria",
@@ -556,6 +791,64 @@ export const EXPERIENCES: Experience[] = [
     insights: { es: ["3.152 m de altura", "3 formas de subir", "Vista de la sabana", "Iglesia y peregrinación"], en: ["3,152 m altitude", "3 ways up", "Savannah view", "Church and pilgrimage"] },
     impact: { es: "Operadores locales bogotanos.", en: "Local Bogotá operators." },
     image: "https://i.pinimg.com/736x/53/1f/00/531f0081c46e718c8eafe1eb51a7ebad.jpg",
+    details: {
+      about: {
+        es: "Monserrate, sí. Pero no por el camino de siempre. Este trekking inicia en la Plaza de Mercado de La Perseverancia y asciende por una ruta antigua, menos transitada, que combina naturaleza altoandina, panorámicas potentes de Bogotá y una historia real de transformación comunitaria. Es montaña con contexto. Es ciudad vista desde arriba… después de caminarla desde abajo.",
+        en: "Monserrate, yes. But not by the usual path. This trek starts at the La Perseverancia Market Square and ascends an old, less-traveled route that combines high-Andean nature, powerful views of Bogotá, and a real story of community transformation. Mountain with context. The city seen from above… after walking it from below.",
+      },
+      difficultyNote: { es: "Media — se sube por la montaña, que en días de lluvia suele tener barro.", en: "Medium — you climb the mountain, which can be muddy on rainy days." },
+      maxPeople: 30,
+      languages: { es: "Español", en: "Spanish" },
+      petsAllowed: true,
+      includes: {
+        es: [
+          "Guía local",
+          "Acompañamiento de jóvenes líderes del territorio",
+          "Interpretación ambiental y social durante el recorrido",
+          "Trekking por ruta alternativa a Monserrate",
+          "Parada estratégica en el Pico del Águila",
+          "Seguro básico de asistencia",
+          "Contribución directa al proceso comunitario de La Perseverancia",
+        ],
+        en: [
+          "Local guide",
+          "Accompaniment by young community leaders",
+          "Environmental and social interpretation along the way",
+          "Trek along the alternative Monserrate route",
+          "Strategic stop at Pico del Águila",
+          "Basic assistance insurance",
+          "Direct contribution to the La Perseverancia community process",
+        ],
+      },
+      meetingPoint: { es: "Plaza de Mercado La Perseverancia", en: "La Perseverancia Market Square" },
+      meetingPointMapUrl: "https://maps.google.com/?q=Plaza+de+Mercado+La+Perseverancia+Bogota",
+      flexibleSchedule: true,
+      recommendations: {
+        es: [
+          "Calzado de trekking con buen agarre",
+          "El sendero tiene tramos en pendiente y superficie irregular",
+          "Ropa cómoda por capas — la temperatura puede cambiar durante el ascenso",
+          "Mínimo 1 litro de agua",
+          "Snack ligero o energético",
+          "Protección solar y gorra",
+          "Condición física básica",
+        ],
+        en: [
+          "Trekking footwear with good grip",
+          "Trail has steep stretches and uneven surfaces",
+          "Comfortable layered clothing — temperature can change during the climb",
+          "At least 1 liter of water",
+          "Light or energy snack",
+          "Sun protection and cap",
+          "Basic physical condition",
+        ],
+      },
+      arrivalTips: {
+        es: "En la plaza puedes llegar antes de la hora y disfrutar de un jugo o un desayuno tradicional.",
+        en: "You can arrive at the market early and enjoy a juice or a traditional breakfast.",
+      },
+      cancellation: { es: "Flexible", en: "Flexible" },
+    },
   },
   {
     slug: "full-day-bogota",
@@ -654,6 +947,120 @@ export const EXPERIENCES: Experience[] = [
     insights: { es: ["Glaciar a 5.330 msnm", "Páramo de frailejones", "Grupos pequeños programados", "Reserva: $150.000 anticipo"], en: ["Glacier at 5,330 masl", "Frailejones páramo", "Small scheduled groups", "Deposit: $150,000"] },
     impact: { es: "Guías locales certificados de Güicán.", en: "Certified local Güicán guides." },
     image: "https://i.pinimg.com/736x/fd/d5/e7/fdd5e7215c178ca104d1eb767a9d71b4.jpg",
+    details: {
+      about: {
+        es: "Explora uno de los escenarios de alta montaña más imponentes de Colombia en una travesía de 3 días diseñada para quienes quieren vivir El Cocuy con preparación, seguridad y acompañamiento experto. Durante el recorrido caminarás entre frailejones milenarios, lagunas de origen glaciar y paisajes abiertos que muestran la fuerza real del páramo andino. Todo bajo una operación cuidada de principio a fin por el equipo de BePelican.\n\n¿Cómo funciona el tour? Tienes dos formas de vivir la experiencia, según desde dónde quieras empezar.\n\nOpción 1. Salida desde Bogotá o Bucaramanga: salimos el jueves en la noche, llegamos al Cocuy el viernes para iniciar la aclimatación y vives la experiencia completa de 3 días.\n\nOpción 2. Inicio directo en El Cocuy: si ya estás en el destino o prefieres llegar por tu cuenta, te unes el viernes desde el desayuno y continúas con el ascenso y el resto del itinerario.",
+        en: "Explore one of Colombia's most imposing high-mountain settings in a 3-day journey designed for those who want to experience El Cocuy with preparation, safety and expert support. Along the way you'll walk among ancient frailejones, glacial lagoons and open landscapes that show the real force of the Andean páramo. All under an operation carefully managed from start to finish by the BePelican team.\n\nHow does the tour work? You have two ways to live the experience, depending on where you want to start from.\n\nOption 1. Departure from Bogotá or Bucaramanga: we leave Thursday night, arrive at El Cocuy on Friday to begin acclimation and you live the full 3-day experience.\n\nOption 2. Direct start at El Cocuy: if you're already at the destination or prefer to arrive on your own, you join Friday from breakfast and continue with the climb and the rest of the itinerary.",
+      },
+      difficultyNote: { es: "Alta — alta montaña, se superan los 5.000 metros sobre el nivel del mar.", en: "High — high mountain, exceeds 5,000 meters above sea level." },
+      maxPeople: 25,
+      itinerary: [
+        {
+          title: { es: "Día 1 — Llegada y aclimatación", en: "Day 1 — Arrival and acclimation" },
+          body: {
+            es: ["Llegada al Cocuy y caminata de aclimatación para preparar el cuerpo a la altura."],
+            en: ["Arrival at El Cocuy and acclimation hike to prepare the body for the altitude."],
+          },
+        },
+        {
+          title: { es: "Día 2 — Ascenso en el Parque Nacional del Cocuy", en: "Day 2 — Ascent in El Cocuy National Park" },
+          body: {
+            es: [
+              "Salida muy temprano hacia el Parque Nacional Natural El Cocuy. La caminata se realiza por uno de los senderos autorizados, seleccionado según condiciones climáticas, permisos vigentes y evaluación del equipo guía.",
+              "Durante la jornada atravesarás zonas de frailejones, ríos de deshielo y miradores naturales de alta montaña, siempre acompañado por guías certificados y con logística controlada.",
+            ],
+            en: [
+              "Very early departure toward El Cocuy National Natural Park. The hike takes place on one of the authorized trails, selected according to weather conditions, current permits and the guide team's assessment.",
+              "Throughout the day you'll cross frailejón zones, meltwater rivers and natural high-mountain viewpoints, always with certified guides and controlled logistics.",
+            ],
+          },
+        },
+        {
+          title: { es: "Día 3 — Recuperación y regreso", en: "Day 3 — Recovery and return" },
+          body: {
+            es: ["Mañana tranquila para descanso y recuperación. Después del almuerzo iniciamos el retorno hacia Bogotá o Bucaramanga, cerrando una experiencia que combina reto físico, naturaleza intacta y operación profesional."],
+            en: ["Calm morning for rest and recovery. After lunch we begin the return to Bogotá or Bucaramanga, closing an experience that combines physical challenge, untouched nature and professional operation."],
+          },
+        },
+      ],
+      includes: {
+        es: [
+          "Transporte ida y regreso desde Bogotá (o punto acordado)",
+          "2 noches de alojamiento en El Cocuy",
+          "Desayuno del primer día hasta almuerzo del día 3",
+          "Ingreso oficial al Parque Nacional Natural El Cocuy",
+          "Guía certificado de alta montaña durante el ascenso",
+          "Caminata de aclimatación",
+          "Seguro de asistencia",
+          "Acompañamiento logístico",
+        ],
+        en: [
+          "Round-trip transport from Bogotá (or agreed point)",
+          "2 nights' lodging at El Cocuy",
+          "From breakfast on day 1 to lunch on day 3",
+          "Official entry to El Cocuy National Natural Park",
+          "Certified high-mountain guide during the ascent",
+          "Acclimation hike",
+          "Assistance insurance",
+          "Logistics support",
+        ],
+      },
+      meetingPoint: { es: "Autopista calle con 142", en: "Autopista at Calle 142" },
+      meetingPointMapUrl: "https://maps.google.com/?q=Autopista+Norte+Calle+142+Bogota",
+      startTime: "21:00",
+      climate: {
+        bestSeason: {
+          es: "El clima es cambiante. Puede haber sol fuerte, viento y lluvia el mismo día.",
+          en: "Weather is changeable. There can be strong sun, wind and rain in the same day.",
+        },
+      },
+      recommendations: {
+        es: [
+          "Botas de trekking",
+          "Recomendado llevar un par de tenis adicionales por si llueve",
+          "Chaqueta impermeable",
+          "Chaqueta térmica",
+          "Segunda capa o camiseta térmica",
+          "Pantalón cómodo de senderismo (no pesado)",
+          "Varias medias cómodas",
+          "Gorro, guantes y cuello térmico",
+          "Ropa cómoda para dormir",
+          "Botella reutilizable para agua",
+          "Snacks energéticos adicionales (recomendado)",
+          "Linterna",
+          "Documento de identidad (obligatorio para ingreso al Parque)",
+          "Artículos de aseo básicos",
+          "Dinero en efectivo para compras locales",
+          "Cobija y cojín para el trayecto en bus (viaje nocturno)",
+          "Gafas oscuras",
+          "Muy buen protector solar",
+        ],
+        en: [
+          "Trekking boots",
+          "Recommended to bring an extra pair of sneakers in case of rain",
+          "Waterproof jacket",
+          "Thermal jacket",
+          "Second layer or thermal shirt",
+          "Comfortable hiking pants (not heavy)",
+          "Several comfortable pairs of socks",
+          "Beanie, gloves and thermal neck warmer",
+          "Comfortable sleepwear",
+          "Reusable water bottle",
+          "Additional energy snacks (recommended)",
+          "Flashlight",
+          "ID document (required to enter the Park)",
+          "Basic toiletries",
+          "Cash for local purchases",
+          "Blanket and cushion for the bus ride (night travel)",
+          "Sunglasses",
+          "Very good sunscreen",
+        ],
+      },
+      cancellation: {
+        es: "Moderada. Una vez realizada la reserva, se debe comprar la entrada al parque. Este valor no es reembolsable.\n\nLa compra la realizan guías locales, quienes deben desplazarse desde la vereda hasta el punto de venta y luego regresar. Por esta gestión se generan costos de transporte y del servicio de compra.\n\nPor esta razón, en caso de cancelación se puede reembolsar todo el dinero pagado, excepto $150.000 pesos, que corresponden a la gestión de compra de la entrada al parque, el tiempo de la persona que realiza el trámite y sus transportes.",
+        en: "Moderate. Once the booking is made, the park entrance must be purchased. This amount is non-refundable.\n\nThe purchase is made by local guides, who must travel from the village to the point of sale and back. This generates transport costs and a service fee.\n\nFor this reason, in case of cancellation, all money paid can be refunded except COP $150,000, which covers the park entrance purchase management, the person's time and their transport.",
+      },
+    },
   },
   {
     slug: "cocuy-termales",

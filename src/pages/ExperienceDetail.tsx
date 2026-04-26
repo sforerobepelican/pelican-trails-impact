@@ -1,6 +1,6 @@
 import { Link, useParams, Navigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { Clock, MapPin, TrendingUp, Heart, Check, ArrowLeft } from "lucide-react";
+import { Clock, MapPin, TrendingUp, Heart, Check, ArrowLeft, Users, Languages, PawPrint, Calendar, Thermometer, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Seo } from "@/components/Seo";
 import { ExperienceCard } from "@/components/ExperienceCard";
@@ -94,6 +94,172 @@ export default function ExperienceDetail() {
       {/* Body */}
       <section className="container py-16 grid lg:grid-cols-3 gap-12">
         <div className="lg:col-span-2 space-y-12">
+          {e.details?.about && (
+            <div>
+              <h2 className="text-3xl mb-4">{t("experience.aboutTitle")}</h2>
+              <div className="space-y-4 text-lg text-muted-foreground leading-relaxed whitespace-pre-line">
+                {e.details.about[lang]}
+              </div>
+              {(e.details.difficultyNote || e.details.maxPeople || e.details.languages || e.details.petsAllowed) && (
+                <div className="mt-6 flex flex-wrap gap-3">
+                  {e.details.difficultyNote && (
+                    <span className="inline-flex items-center gap-1.5 rounded-full bg-muted px-3 py-1.5 text-xs font-semibold text-foreground">
+                      <TrendingUp className="h-3.5 w-3.5 text-primary" />
+                      {t("experience.difficultyLevel")}: {e.details.difficultyNote[lang]}
+                    </span>
+                  )}
+                  {typeof e.details.maxPeople === "number" && (
+                    <span className="inline-flex items-center gap-1.5 rounded-full bg-muted px-3 py-1.5 text-xs font-semibold text-foreground">
+                      <Users className="h-3.5 w-3.5 text-primary" />
+                      {t("experience.maxPeople", { count: e.details.maxPeople })}
+                    </span>
+                  )}
+                  {e.details.languages && (
+                    <span className="inline-flex items-center gap-1.5 rounded-full bg-muted px-3 py-1.5 text-xs font-semibold text-foreground">
+                      <Languages className="h-3.5 w-3.5 text-primary" />
+                      {e.details.languages[lang]}
+                    </span>
+                  )}
+                  {e.details.petsAllowed && (
+                    <span className="inline-flex items-center gap-1.5 rounded-full bg-muted px-3 py-1.5 text-xs font-semibold text-foreground">
+                      <PawPrint className="h-3.5 w-3.5 text-primary" />
+                      {t("experience.petsAllowed")}
+                    </span>
+                  )}
+                </div>
+              )}
+            </div>
+          )}
+
+          {e.details?.itinerary && e.details.itinerary.length > 0 && (
+            <div>
+              <h2 className="text-3xl mb-6">{t("experience.itinerary")}</h2>
+              <ol className="space-y-6">
+                {e.details.itinerary.map((day, i) => (
+                  <li key={i} className="flex gap-4">
+                    <div className="shrink-0 inline-flex h-10 w-10 items-center justify-center rounded-full bg-primary text-primary-foreground font-display text-lg">
+                      {i + 1}
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="font-display text-xl mb-2 text-foreground">{day.title[lang]}</h3>
+                      <div className="space-y-2 text-foreground/80">
+                        {day.body[lang].map((para, j) => (
+                          <p key={j} className="leading-relaxed">{para}</p>
+                        ))}
+                      </div>
+                    </div>
+                  </li>
+                ))}
+              </ol>
+            </div>
+          )}
+
+          {e.details?.includes && (
+            <div>
+              <h2 className="text-3xl mb-4">{t("experience.includes")}</h2>
+              <ul className="grid sm:grid-cols-2 gap-3">
+                {e.details.includes[lang].map(item => (
+                  <li key={item} className="flex items-start gap-3">
+                    <span className="mt-1 inline-flex h-6 w-6 items-center justify-center rounded-full bg-leaf/15 text-leaf shrink-0">
+                      <Check className="h-3.5 w-3.5" />
+                    </span>
+                    <span className="text-foreground/90">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+
+          {(e.details?.meetingPoint || e.details?.endingPoint || e.details?.startTime || e.details?.flexibleSchedule) && (
+            <div className="rounded-2xl bg-muted/40 border border-border p-6 md:p-8 space-y-4">
+              {e.details?.meetingPoint && (
+                <div>
+                  <div className="text-xs uppercase tracking-wider text-muted-foreground font-semibold mb-1 flex items-center gap-1.5">
+                    <MapPin className="h-3.5 w-3.5 text-primary" /> {t("experience.meetingPoint")}
+                  </div>
+                  <p className="text-foreground">{e.details.meetingPoint[lang]}</p>
+                  {e.details.meetingPointMapUrl && (
+                    <a href={e.details.meetingPointMapUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-primary text-sm font-semibold mt-1 hover:underline">
+                      {t("experience.viewOnMap")} <ExternalLink className="h-3.5 w-3.5" />
+                    </a>
+                  )}
+                </div>
+              )}
+              {e.details?.endingPoint && (
+                <div>
+                  <div className="text-xs uppercase tracking-wider text-muted-foreground font-semibold mb-1 flex items-center gap-1.5">
+                    <MapPin className="h-3.5 w-3.5 text-primary" /> {t("experience.endingPoint")}
+                  </div>
+                  <p className="text-foreground">{e.details.endingPoint[lang]}</p>
+                </div>
+              )}
+              {e.details?.startTime && (
+                <div>
+                  <div className="text-xs uppercase tracking-wider text-muted-foreground font-semibold mb-1 flex items-center gap-1.5">
+                    <Clock className="h-3.5 w-3.5 text-primary" /> {t("experience.startTime")}
+                  </div>
+                  <p className="text-foreground">{e.details.startTime}</p>
+                </div>
+              )}
+              {e.details?.flexibleSchedule && !e.details?.startTime && (
+                <div className="flex items-center gap-2 text-foreground">
+                  <Calendar className="h-4 w-4 text-primary" />
+                  <span>{t("experience.flexibleSchedule")}</span>
+                </div>
+              )}
+            </div>
+          )}
+
+          {e.details?.climate && (e.details.climate.temperature || e.details.climate.bestSeason) && (
+            <div>
+              <h2 className="text-3xl mb-4 flex items-center gap-2">
+                <Thermometer className="h-7 w-7 text-primary" /> {t("experience.climate")}
+              </h2>
+              <div className="grid md:grid-cols-2 gap-4">
+                {e.details.climate.temperature && (
+                  <div className="rounded-2xl border border-border p-5 bg-card">
+                    <div className="text-xs uppercase tracking-wider text-muted-foreground font-semibold mb-2">{t("experience.temperature")}</div>
+                    <p className="text-foreground">{e.details.climate.temperature[lang]}</p>
+                  </div>
+                )}
+                {e.details.climate.bestSeason && (
+                  <div className="rounded-2xl border border-border p-5 bg-card">
+                    <div className="text-xs uppercase tracking-wider text-muted-foreground font-semibold mb-2">{t("experience.bestSeason")}</div>
+                    <p className="text-foreground">{e.details.climate.bestSeason[lang]}</p>
+                  </div>
+                )}
+              </div>
+            </div>
+          )}
+
+          {e.details?.recommendations && (
+            <div>
+              <h2 className="text-3xl mb-4">{t("experience.recommendations")}</h2>
+              <ul className="grid sm:grid-cols-2 gap-2">
+                {e.details.recommendations[lang].map(item => (
+                  <li key={item} className="flex items-start gap-3 text-foreground/90">
+                    <span className="mt-2 h-1.5 w-1.5 rounded-full bg-primary shrink-0" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+
+          {e.details?.arrivalTips && (
+            <div className="rounded-2xl bg-accent/10 border border-accent/20 p-6">
+              <div className="text-xs uppercase tracking-wider text-accent font-semibold mb-2">{t("experience.arrivalTips")}</div>
+              <p className="text-foreground/90">{e.details.arrivalTips[lang]}</p>
+            </div>
+          )}
+
+          {e.details?.cancellation && (
+            <div>
+              <h2 className="text-2xl mb-3">{t("experience.cancellation")}</h2>
+              <p className="text-muted-foreground whitespace-pre-line leading-relaxed">{e.details.cancellation[lang]}</p>
+            </div>
+          )}
+
           <div>
             <h2 className="text-3xl mb-4">{t("experience.insights")}</h2>
             <ul className="space-y-3">
