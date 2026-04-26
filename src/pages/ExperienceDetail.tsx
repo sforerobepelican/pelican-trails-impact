@@ -128,7 +128,7 @@ export default function ExperienceDetail() {
               <Link to={lp("contacto")}>{t("experience.bookCta")}</Link>
             </Button>
             <Button asChild size="lg" variant="outline" className="w-full">
-              <a href={`https://wa.me/573000000000?text=${encodeURIComponent(`Hola, me interesa la experiencia: ${e.name[lang]}`)}`} target="_blank" rel="noopener noreferrer">
+              <a href={`https://wa.me/573135525944?text=${encodeURIComponent(`Hola, me interesa la experiencia: ${e.name[lang]}`)}`} target="_blank" rel="noopener noreferrer">
                 {t("experience.contactCta")}
               </a>
             </Button>

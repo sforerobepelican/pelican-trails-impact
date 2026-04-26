@@ -11,7 +11,7 @@ import { Seo } from "@/components/Seo";
 import { useLang } from "@/hooks/useLang";
 import { supabase } from "@/integrations/supabase/client";
 
-const WHATSAPP_NUMBER = "573000000000";
+const WHATSAPP_NUMBER = "573135525944";
 
 const schema = z.object({
   name: z.string().trim().min(1).max(120),
@@ -74,9 +74,9 @@ export default function Contact() {
                 <MessageCircle className="h-5 w-5 text-primary" />
                 <span className="font-semibold">WhatsApp</span>
               </a>
-              <a href="mailto:hola@bepelican.com" className="flex items-center gap-3 p-4 rounded-xl bg-card border border-border hover:border-primary transition-smooth">
+              <a href="mailto:comunicaciones@bepelican.com" className="flex items-center gap-3 p-4 rounded-xl bg-card border border-border hover:border-primary transition-smooth">
                 <Mail className="h-5 w-5 text-primary" />
-                <span className="font-semibold">hola@bepelican.com</span>
+                <span className="font-semibold">comunicaciones@bepelican.com</span>
               </a>
             </div>
           </div>
