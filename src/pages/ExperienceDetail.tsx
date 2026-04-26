@@ -170,6 +170,22 @@ export default function ExperienceDetail() {
             </div>
           )}
 
+          {e.details?.notIncluded && (
+            <div>
+              <h2 className="text-3xl mb-4">{t("experience.notIncluded")}</h2>
+              <ul className="grid sm:grid-cols-2 gap-3">
+                {e.details.notIncluded[lang].map(item => (
+                  <li key={item} className="flex items-start gap-3">
+                    <span className="mt-1 inline-flex h-6 w-6 items-center justify-center rounded-full bg-destructive/10 text-destructive shrink-0">
+                      <X className="h-3.5 w-3.5" />
+                    </span>
+                    <span className="text-foreground/90">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+
           {(e.details?.meetingPoint || e.details?.endingPoint || e.details?.startTime || e.details?.flexibleSchedule) && (
             <div className="rounded-2xl bg-muted/40 border border-border p-6 md:p-8 space-y-4">
               {e.details?.meetingPoint && (
