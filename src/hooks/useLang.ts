@@ -21,7 +21,8 @@ export function formatPriceCOP(value: number, lang: Lang) {
     currency: "COP",
     maximumFractionDigits: 0,
   });
-  return formatter.format(value);
+  // Append explicit "COP" suffix for clarity
+  return `${formatter.format(value)} COP`;
 }
 
 // Fallback TRM (COP per 1 USD) used if the live rate cannot be fetched.
@@ -95,11 +96,12 @@ export function formatPriceLocalized(valueCOP: number, lang: Lang, trm: number |
       return "—";
     }
     const usd = copToUsd(valueCOP, trm);
-    return new Intl.NumberFormat("en-US", {
+    const formatted = new Intl.NumberFormat("en-US", {
       style: "currency",
       currency: "USD",
       maximumFractionDigits: 0,
     }).format(usd);
+    return `${formatted} USD`;
   }
   return formatPriceCOP(valueCOP, lang);
 }
