@@ -39,6 +39,34 @@ export interface Experience {
   insights: { es: string[]; en: string[] };
   impact: { es: string; en: string };
   image: string;
+  details?: ExperienceDetails;
+}
+
+export interface ItineraryDay {
+  title: { es: string; en: string };
+  body: { es: string[]; en: string[] };
+}
+
+export interface ExperienceDetails {
+  about?: { es: string; en: string };
+  difficultyNote?: { es: string; en: string };
+  maxPeople?: number;
+  languages?: { es: string; en: string };
+  petsAllowed?: boolean;
+  itinerary?: ItineraryDay[];
+  includes?: { es: string[]; en: string[] };
+  meetingPoint?: { es: string; en: string };
+  meetingPointMapUrl?: string;
+  endingPoint?: { es: string; en: string };
+  startTime?: string;
+  flexibleSchedule?: boolean;
+  recommendations?: { es: string[]; en: string[] };
+  arrivalTips?: { es: string; en: string };
+  cancellation?: { es: string; en: string };
+  climate?: {
+    temperature?: { es: string; en: string };
+    bestSeason?: { es: string; en: string };
+  };
 }
 
 export const ZONES: Record<ZoneId, { name: { es: string; en: string }; pitch: { es: string; en: string } }> = {
