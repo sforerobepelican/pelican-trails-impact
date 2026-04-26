@@ -317,7 +317,7 @@ export const EXPERIENCES: Experience[] = [
     },
     insights: { es: ["44 km de trek", "Ciudad arqueológica de Teyuna (>30 ha)", "Encuentros con Kogui y Tayrona", "Más antigua que Machu Picchu"], en: ["44 km trek", "Teyuna archaeological site (>30 ha)", "Encounters with Kogui and Tayrona", "Older than Machu Picchu"] },
     impact: { es: "Cada trekker contribuye con guías locales y comunidades indígenas de la Sierra.", en: "Every trekker supports local guides and indigenous communities of the Sierra." },
-    image: "https://i.pinimg.com/736x/6c/1e/8d/6c1e8d96075cbad0ce8057089f3a8300.jpg",
+    image: "https://i.pinimg.com/1200x/54/98/06/549806ba9d18933d172d584ae1038108.jpg",
   },
   {
     slug: "ciudad-perdida-5-dias",
@@ -337,7 +337,7 @@ export const EXPERIENCES: Experience[] = [
     },
     insights: { es: ["5 días en la Sierra", "Ritmo contemplativo", "Mayor tiempo en Teyuna", "Comunidades Kogui"], en: ["5 days in the Sierra", "Contemplative pace", "More time at Teyuna", "Kogui communities"] },
     impact: { es: "Apoyo extendido a comunidades indígenas de la Sierra Nevada.", en: "Extended support to Sierra Nevada indigenous communities." },
-    image: "https://i.pinimg.com/736x/67/f2/de/67f2dee4359e127e3b96d9d4942bc137.jpg",
+    image: "https://i.pinimg.com/1200x/bf/28/d6/bf28d6d17e73b1768b7bd70f994d7aff.jpg",
   },
   // ---------------- MEDELLÍN ----------------
   {
