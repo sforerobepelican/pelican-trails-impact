@@ -11,6 +11,7 @@ import Destinations from "./pages/Destinations";
 import ExperienceDetail from "./pages/ExperienceDetail";
 import Themes from "./pages/Themes";
 import Contact from "./pages/Contact";
+import Privacy from "./pages/Privacy";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -32,6 +33,8 @@ const App = () => (
               <Route path="themes" element={<Themes />} />
               <Route path="contacto" element={<Contact />} />
               <Route path="contact" element={<Contact />} />
+              <Route path="privacidad" element={<Privacy />} />
+              <Route path="privacy" element={<Privacy />} />
               <Route path="tour/:slug" element={<ExperienceDetail />} />
             </Route>
             <Route path="*" element={<NotFound />} />
