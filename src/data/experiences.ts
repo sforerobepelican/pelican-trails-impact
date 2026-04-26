@@ -641,7 +641,7 @@ export const EXPERIENCES: Experience[] = [
     durationDays: 3,
     difficulty: "extreme",
     pace: { es: "Exigente — 5.330 msnm", en: "Demanding — 5,330 masl" },
-    priceCOP: 570000,
+    priceCOP: 660000,
     priceNote: { es: "Desde, grupal sin tiquete · hasta $850.000 individual con tiquete", en: "From, group without ticket · up to $850,000 solo with flight" },
     name: { es: "El Cocuy — Salida jueves", en: "El Cocuy — Thursday Departure" },
     hook: { es: "Glaciar + páramo de frailejones. Salidas grupales programadas.", en: "Glacier + frailejones páramo. Scheduled group departures." },
