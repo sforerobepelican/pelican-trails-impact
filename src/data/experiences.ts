@@ -415,7 +415,7 @@ export const EXPERIENCES: Experience[] = [
     },
     insights: { es: ["Centro colonial", "Puente de Occidente", "Iglesias coloniales", "Almuerzo típico"], en: ["Colonial center", "Western Bridge", "Colonial churches", "Typical lunch"] },
     impact: { es: "Apoyo a operadores y artesanos del municipio.", en: "Support to local operators and artisans." },
-    image: "/src/assets/theme-heritage.jpg",
+    image: "https://i.pinimg.com/1200x/4d/cd/a6/4dcda65cd031157277014aebd6b5ae8e.jpg",
   },
   {
     slug: "tour-cafe-antioquia",
@@ -434,7 +434,7 @@ export const EXPERIENCES: Experience[] = [
     },
     insights: { es: ["Caminata por cafetal", "Proceso completo", "Cata con barista", "Almuerzo en finca"], en: ["Coffee farm walk", "Full process", "Tasting with barista", "Farm lunch"] },
     impact: { es: "Ingresos directos a familias caficultoras.", en: "Direct income to coffee-growing families." },
-    image: "/src/assets/theme-flavors.jpg",
+    image: "https://i.pinimg.com/736x/78/29/63/7829632d4fd0065245b7ee107b5e6889.jpg",
   },
   // ---------------- BOGOTÁ ----------------
   {
@@ -495,7 +495,7 @@ export const EXPERIENCES: Experience[] = [
     },
     insights: { es: ["TransMiCable", "Taller de graffiti", "Vista panorámica", "Guías de la comunidad"], en: ["TransMiCable", "Graffiti workshop", "Panoramic view", "Community guides"] },
     impact: { es: "Los ingresos apoyan colectivos juveniles de Ciudad Bolívar.", en: "Revenue supports youth collectives in Ciudad Bolívar." },
-    image: "https://images.unsplash.com/photo-1599930113854-d6d7fd521f10?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=1600",
+    image: "https://i.pinimg.com/1200x/90/82/1f/90821fb0a0a5fde047ca85de9836a3dd.jpg",
   },
   {
     slug: "paloquemao",
@@ -514,7 +514,7 @@ export const EXPERIENCES: Experience[] = [
     },
     insights: { es: ["Más de 30 frutas exóticas", "Flores y plantas", "Desayuno típico", "Historia del mercado"], en: ["30+ exotic fruits", "Flowers and plants", "Typical breakfast", "Market history"] },
     impact: { es: "Compras directas a comerciantes del mercado.", en: "Direct purchases from market vendors." },
-    image: "https://images.unsplash.com/photo-1488459716781-31db52582fe9?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=1600",
+    image: "https://i.pinimg.com/1200x/ef/19/bf/ef19bf55bb5a016114a59f3d916818b3.jpg",
   },
   {
     slug: "corabastos",
@@ -534,7 +534,7 @@ export const EXPERIENCES: Experience[] = [
     },
     insights: { es: ["Mercado de 60 ha", "Recorrido a las 5 a.m.", "Desayuno con cargueros", "Almuerzo en Kennedy"], en: ["60 ha market", "5 a.m. tour", "Breakfast with porters", "Lunch in Kennedy"] },
     impact: { es: "Trabajamos con cargueros y comerciantes locales.", en: "We work with porters and local vendors." },
-    image: "https://images.unsplash.com/photo-1488459716781-31db52582fe9?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=1600",
+    image: "https://i.pinimg.com/1200x/ef/19/bf/ef19bf55bb5a016114a59f3d916818b3.jpg",
   },
   {
     slug: "monserrate",
@@ -553,7 +553,7 @@ export const EXPERIENCES: Experience[] = [
     },
     insights: { es: ["3.152 m de altura", "3 formas de subir", "Vista de la sabana", "Iglesia y peregrinación"], en: ["3,152 m altitude", "3 ways up", "Savannah view", "Church and pilgrimage"] },
     impact: { es: "Operadores locales bogotanos.", en: "Local Bogotá operators." },
-    image: "https://images.unsplash.com/photo-1568454537842-d933259bb1ce?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=1600",
+    image: "https://i.pinimg.com/736x/53/1f/00/531f0081c46e718c8eafe1eb51a7ebad.jpg",
   },
   {
     slug: "full-day-bogota",
@@ -611,7 +611,7 @@ export const EXPERIENCES: Experience[] = [
     },
     insights: { es: ["Cascada de 590 m", "Bosque de niebla", "Almuerzo típico", "Ida y vuelta desde Bogotá"], en: ["590 m waterfall", "Cloud forest", "Typical lunch", "Round trip from Bogotá"] },
     impact: { es: "Familias campesinas de Choachí.", en: "Choachí peasant families." },
-    image: "https://images.unsplash.com/photo-1604989558437-853b50d6c331?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=1600",
+    image: "https://i.pinimg.com/1200x/11/8f/b0/118fb09856589a6bde2dd60e22fdeee1.jpg",
   },
   {
     slug: "catedral-sal-guatavita",
