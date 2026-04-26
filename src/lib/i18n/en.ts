@@ -93,6 +93,7 @@ export const en = {
     company: "Company",
     follow: "Follow us",
     rights: "All rights reserved.",
+    privacy: "Privacy policy",
   },
   difficulty: {
     easy: "Suitable for all",
