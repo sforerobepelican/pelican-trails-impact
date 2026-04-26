@@ -44,7 +44,6 @@ export function Navbar() {
     >
       <nav className="container flex items-center justify-between py-3 md:py-4">
         <Link to={`/${lang}`} className="flex items-center gap-2" aria-label="BePelican">
-          <img src={logo} alt="BePelican" width={40} height={40} className="h-10 w-10" />
           <img src={logotype} alt="" aria-hidden="true" className="hidden md:block h-8 w-auto" />
         </Link>
 
