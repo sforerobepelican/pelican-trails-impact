@@ -6,13 +6,14 @@ import { Seo } from "@/components/Seo";
 import { ExperienceCard } from "@/components/ExperienceCard";
 import { CTASection } from "@/components/CTASection";
 import { EXPERIENCES, getExperienceBySlug, ZONES, THEMES } from "@/data/experiences";
-import { useLang, useLocalizedPath, formatPriceCOP } from "@/hooks/useLang";
+import { useLang, useLocalizedPath, formatPriceLocalized, useTrm } from "@/hooks/useLang";
 
 export default function ExperienceDetail() {
   const { slug } = useParams();
   const { t } = useTranslation();
   const lang = useLang();
   const lp = useLocalizedPath();
+  const trm = useTrm();
   const e = slug ? getExperienceBySlug(slug) : undefined;
 
   if (!e) return <Navigate to={lp("destinos")} replace />;
@@ -79,7 +80,7 @@ export default function ExperienceDetail() {
               <div>
                 <div className="text-xs uppercase tracking-wider text-muted-foreground font-semibold mb-1">{t("destinations.filterPrice")}</div>
                 {e.priceCOP ? (
-                  <div className="font-display text-2xl text-primary leading-tight">{formatPriceCOP(e.priceCOP, lang)}</div>
+                  <div className="font-display text-2xl text-primary leading-tight">{formatPriceLocalized(e.priceCOP, lang, trm)}</div>
                 ) : (
                   <span className="inline-flex items-center rounded-full bg-accent/15 text-accent px-3 py-1 text-xs font-semibold">{t("experience.comingSoon")}</span>
                 )}

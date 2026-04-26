@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { Clock, MapPin, TrendingUp } from "lucide-react";
 import type { Experience } from "@/data/experiences";
 import { ZONES, THEMES } from "@/data/experiences";
-import { useLang, useLocalizedPath, formatPriceCOP } from "@/hooks/useLang";
+import { useLang, useLocalizedPath, formatPriceLocalized, useTrm } from "@/hooks/useLang";
 import { useTranslation } from "react-i18next";
 import { cn } from "@/lib/utils";
 
@@ -15,6 +15,7 @@ export function ExperienceCard({ experience: e, className }: Props) {
   const lang = useLang();
   const lp = useLocalizedPath();
   const { t } = useTranslation();
+  const trm = useTrm();
   const zone = ZONES[e.zone];
   const mainTheme = THEMES[e.themes[0]];
 
@@ -59,7 +60,7 @@ export function ExperienceCard({ experience: e, className }: Props) {
           {e.priceCOP ? (
             <div>
               <span className="text-xs text-muted-foreground">{t("experience.from")} </span>
-              <span className="font-display text-2xl text-primary">{formatPriceCOP(e.priceCOP, lang)}</span>
+              <span className="font-display text-2xl text-primary">{formatPriceLocalized(e.priceCOP, lang, trm)}</span>
             </div>
           ) : (
             <span className="inline-flex items-center rounded-full bg-accent/15 text-accent px-3 py-1 text-xs font-semibold">
