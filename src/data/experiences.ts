@@ -172,7 +172,7 @@ export const EXPERIENCES: Experience[] = [
       es: "Cada viaje aporta directamente a familias y guías locales del trapecio amazónico.",
       en: "Every trip directly supports local families and guides of the Amazon Trapezoid.",
     },
-    image: "/src/assets/theme-eco.jpg",
+    image: "https://images.unsplash.com/photo-1585926494452-3bbf4064af50?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=1600",
   },
   {
     slug: "amazonas-5-dias",
@@ -198,7 +198,7 @@ export const EXPERIENCES: Experience[] = [
       en: ["Living with communities", "Wildlife watching", "Navigating tributaries", "Typical Amazon meals"],
     },
     impact: { es: "Apoyo directo a guías y artesanos locales.", en: "Direct support to local guides and artisans." },
-    image: "/src/assets/theme-eco.jpg",
+    image: "https://images.unsplash.com/photo-1604092257464-d0d7f0d167bc?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=1600",
   },
   {
     slug: "amazonas-acampada",
@@ -224,7 +224,7 @@ export const EXPERIENCES: Experience[] = [
       en: ["Camping in primary forest", "Night hikes with guides", "Bioluminescent mushrooms", "Birdwatching at dawn"],
     },
     impact: { es: "Tu viaje sostiene programas de conservación y guías locales.", en: "Your trip supports conservation and local guides." },
-    image: "/src/assets/theme-adventure.jpg",
+    image: "https://images.unsplash.com/photo-1590324493291-747afe32ff58?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=1600",
   },
   {
     slug: "amazonas-4-dias",
@@ -250,7 +250,7 @@ export const EXPERIENCES: Experience[] = [
       en: ["Pink dolphins", "Monkey Island", "Treehouse", "Pirarucú workshop", "Sunsets at Santander Park"],
     },
     impact: { es: "Apoyo directo a comunidades del trapecio amazónico.", en: "Direct support to Amazon Trapezoid communities." },
-    image: "/src/assets/theme-eco.jpg",
+    image: "https://images.unsplash.com/photo-1604989558437-853b50d6c331?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=1600",
   },
   {
     slug: "amazonas-3-dias",
@@ -270,7 +270,7 @@ export const EXPERIENCES: Experience[] = [
     },
     insights: { es: ["Navegación por el Amazonas", "Comunidad indígena", "Atardecer con loros", "Comida típica"], en: ["Amazon navigation", "Indigenous community", "Sunset with parrots", "Typical food"] },
     impact: { es: "Beneficio directo a guías locales.", en: "Direct benefit to local guides." },
-    image: "/src/assets/theme-eco.jpg",
+    image: "https://images.unsplash.com/photo-1604092257464-d0d7f0d167bc?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=1600",
   },
   // ---------------- LA GUAJIRA ----------------
   {
@@ -296,7 +296,7 @@ export const EXPERIENCES: Experience[] = [
       en: ["Exclusive Wayúu Ulishamana community", "Cabo de la Vela and Pilón de Azúcar", "Lighthouse sunset + bonfire", "Pink flamingos at Manaure", "Lobster and Wayúu cuisine"],
     },
     impact: { es: "El plan se construyó con la comunidad Ulishamana — los ingresos apoyan su escuela.", en: "Built with the Ulishamana community — revenue supports their school." },
-    image: "/src/assets/theme-postcard.jpg",
+    image: "https://images.unsplash.com/photo-1602002418082-dd4a8f7d2b2e?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=1600",
   },
   // ---------------- SANTA MARTA ----------------
   {
@@ -317,7 +317,7 @@ export const EXPERIENCES: Experience[] = [
     },
     insights: { es: ["44 km de trek", "Ciudad arqueológica de Teyuna (>30 ha)", "Encuentros con Kogui y Tayrona", "Más antigua que Machu Picchu"], en: ["44 km trek", "Teyuna archaeological site (>30 ha)", "Encounters with Kogui and Tayrona", "Older than Machu Picchu"] },
     impact: { es: "Cada trekker contribuye con guías locales y comunidades indígenas de la Sierra.", en: "Every trekker supports local guides and indigenous communities of the Sierra." },
-    image: "/src/assets/theme-heritage.jpg",
+    image: "https://images.unsplash.com/photo-1539635278303-d4002c07eae3?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=1600",
   },
   {
     slug: "ciudad-perdida-5-dias",
@@ -337,7 +337,7 @@ export const EXPERIENCES: Experience[] = [
     },
     insights: { es: ["5 días en la Sierra", "Ritmo contemplativo", "Mayor tiempo en Teyuna", "Comunidades Kogui"], en: ["5 days in the Sierra", "Contemplative pace", "More time at Teyuna", "Kogui communities"] },
     impact: { es: "Apoyo extendido a comunidades indígenas de la Sierra Nevada.", en: "Extended support to Sierra Nevada indigenous communities." },
-    image: "/src/assets/theme-heritage.jpg",
+    image: "https://images.unsplash.com/photo-1518182170546-07661fd94144?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=1600",
   },
   // ---------------- MEDELLÍN ----------------
   {
@@ -357,7 +357,7 @@ export const EXPERIENCES: Experience[] = [
     },
     insights: { es: ["Plaza Botero", "Pueblito Paisa", "Comuna 13 con guías locales", "Arte urbano y resiliencia"], en: ["Botero Plaza", "Pueblito Paisa", "Comuna 13 with local guides", "Street art and resilience"] },
     impact: { es: "Trabajamos con guías de la Comuna 13 que cuentan su propia historia.", en: "We work with Comuna 13 guides telling their own story." },
-    image: "/src/assets/theme-urban.jpg",
+    image: "https://images.unsplash.com/photo-1731560818517-00c245cec091?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=1600",
   },
   {
     slug: "tour-pablo-escobar",
@@ -377,7 +377,7 @@ export const EXPERIENCES: Experience[] = [
     },
     insights: { es: ["Parque de la Inflexión", "Memoria de las víctimas", "Contexto histórico real", "Sin romantización"], en: ["Inflexion Park", "Memory of the victims", "Real historical context", "Zero romanticization"] },
     impact: { es: "Tour diseñado con familias afectadas; los ingresos apoyan iniciativas de memoria.", en: "Designed with affected families; revenue supports memory initiatives." },
-    image: "/src/assets/theme-urban.jpg",
+    image: "https://images.unsplash.com/photo-1551282643-392c82ebb909?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=1600",
   },
   {
     slug: "guatape-penol",
@@ -396,7 +396,7 @@ export const EXPERIENCES: Experience[] = [
     },
     insights: { es: ["Piedra de El Peñol — 220 m", "Embalse de Guatapé", "Pueblo de zócalos pintados", "Almuerzo típico paisa"], en: ["El Peñol rock — 220 m", "Guatapé reservoir", "Painted zócalo town", "Typical paisa lunch"] },
     impact: { es: "Operadores y guías locales de Guatapé.", en: "Local Guatapé operators and guides." },
-    image: "/src/assets/theme-express.jpg",
+    image: "https://images.unsplash.com/photo-1582568742002-499ac33758ce?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=1600",
   },
   {
     slug: "santa-fe-antioquia",
@@ -455,7 +455,7 @@ export const EXPERIENCES: Experience[] = [
     },
     insights: { es: ["Calle de los abrazos", "Cata de chicha", "Monumento del silencio", "Guías locales"], en: ["Street of hugs", "Chicha tasting", "Monument of silence", "Local guides"] },
     impact: { es: "Guías de La Perse cuentan su propia historia y reciben ingresos directos.", en: "La Perse guides tell their own story and receive direct income." },
-    image: "/src/assets/theme-urban.jpg",
+    image: "https://images.unsplash.com/photo-1568632234167-789922ea3cc4?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=1600",
   },
   {
     slug: "graffiti-tour-candelaria",
@@ -475,7 +475,7 @@ export const EXPERIENCES: Experience[] = [
     },
     insights: { es: ["Egipto y El Rocío", "Murales políticos", "Calle Caliente", "Vista de Bogotá"], en: ["Egipto and El Rocío", "Political murals", "Hot Street", "View of Bogotá"] },
     impact: { es: "Trabajamos con artistas y colectivos del barrio.", en: "We work with neighborhood artists and collectives." },
-    image: "/src/assets/theme-urban.jpg",
+    image: "https://images.unsplash.com/photo-1664851490956-b45905d6ffba?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=1600",
   },
   {
     slug: "ciudad-bolivar-arte",
@@ -495,7 +495,7 @@ export const EXPERIENCES: Experience[] = [
     },
     insights: { es: ["TransMiCable", "Taller de graffiti", "Vista panorámica", "Guías de la comunidad"], en: ["TransMiCable", "Graffiti workshop", "Panoramic view", "Community guides"] },
     impact: { es: "Los ingresos apoyan colectivos juveniles de Ciudad Bolívar.", en: "Revenue supports youth collectives in Ciudad Bolívar." },
-    image: "/src/assets/theme-urban.jpg",
+    image: "https://images.unsplash.com/photo-1599930113854-d6d7fd521f10?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=1600",
   },
   {
     slug: "paloquemao",
@@ -514,7 +514,7 @@ export const EXPERIENCES: Experience[] = [
     },
     insights: { es: ["Más de 30 frutas exóticas", "Flores y plantas", "Desayuno típico", "Historia del mercado"], en: ["30+ exotic fruits", "Flowers and plants", "Typical breakfast", "Market history"] },
     impact: { es: "Compras directas a comerciantes del mercado.", en: "Direct purchases from market vendors." },
-    image: "/src/assets/theme-flavors.jpg",
+    image: "https://images.unsplash.com/photo-1488459716781-31db52582fe9?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=1600",
   },
   {
     slug: "corabastos",
@@ -534,7 +534,7 @@ export const EXPERIENCES: Experience[] = [
     },
     insights: { es: ["Mercado de 60 ha", "Recorrido a las 5 a.m.", "Desayuno con cargueros", "Almuerzo en Kennedy"], en: ["60 ha market", "5 a.m. tour", "Breakfast with porters", "Lunch in Kennedy"] },
     impact: { es: "Trabajamos con cargueros y comerciantes locales.", en: "We work with porters and local vendors." },
-    image: "/src/assets/theme-flavors.jpg",
+    image: "https://images.unsplash.com/photo-1488459716781-31db52582fe9?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=1600",
   },
   {
     slug: "monserrate",
@@ -553,7 +553,7 @@ export const EXPERIENCES: Experience[] = [
     },
     insights: { es: ["3.152 m de altura", "3 formas de subir", "Vista de la sabana", "Iglesia y peregrinación"], en: ["3,152 m altitude", "3 ways up", "Savannah view", "Church and pilgrimage"] },
     impact: { es: "Operadores locales bogotanos.", en: "Local Bogotá operators." },
-    image: "/src/assets/theme-heritage.jpg",
+    image: "https://images.unsplash.com/photo-1568454537842-d933259bb1ce?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=1600",
   },
   {
     slug: "full-day-bogota",
@@ -572,7 +572,7 @@ export const EXPERIENCES: Experience[] = [
     },
     insights: { es: ["La Perse", "Partido de tejo (deporte nacional)", "Cata de café", "Comida tradicional"], en: ["La Perse", "Tejo match (national sport)", "Coffee tasting", "Traditional food"] },
     impact: { es: "Ingresos directos a operadores locales.", en: "Direct income to local operators." },
-    image: "/src/assets/theme-urban.jpg",
+    image: "https://images.unsplash.com/photo-1561165804-08ddb43c659f?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=1600",
   },
   // ---------------- CUNDINAMARCA ----------------
   {
@@ -592,7 +592,7 @@ export const EXPERIENCES: Experience[] = [
     },
     insights: { es: ["Páramo a 3.400 msnm", "Frailejones milenarios", "Posible avistamiento de oso de anteojos", "Cupo controlado"], en: ["Páramo at 3,400 masl", "Ancient frailejones", "Possible spectacled bear sighting", "Limited capacity"] },
     impact: { es: "Apoyo a programas de conservación del PNN Chingaza.", en: "Support to Chingaza National Park conservation." },
-    image: "/src/assets/theme-adventure.jpg",
+    image: "https://images.unsplash.com/photo-1540955330685-7fb3408d9c5b?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=1600",
   },
   {
     slug: "la-chorrera",
@@ -611,7 +611,7 @@ export const EXPERIENCES: Experience[] = [
     },
     insights: { es: ["Cascada de 590 m", "Bosque de niebla", "Almuerzo típico", "Ida y vuelta desde Bogotá"], en: ["590 m waterfall", "Cloud forest", "Typical lunch", "Round trip from Bogotá"] },
     impact: { es: "Familias campesinas de Choachí.", en: "Choachí peasant families." },
-    image: "/src/assets/theme-adventure.jpg",
+    image: "https://images.unsplash.com/photo-1604989558437-853b50d6c331?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=1600",
   },
   {
     slug: "catedral-sal-guatavita",
@@ -630,7 +630,7 @@ export const EXPERIENCES: Experience[] = [
     },
     insights: { es: ["180 m bajo tierra", "Catedral construida en sal", "Laguna sagrada Muisca", "Origen de El Dorado"], en: ["180 m underground", "Cathedral carved in salt", "Sacred Muisca lagoon", "Origin of El Dorado"] },
     impact: { es: "Operadores locales de Zipaquirá y Sesquilé.", en: "Local Zipaquirá and Sesquilé operators." },
-    image: "/src/assets/theme-heritage.jpg",
+    image: "https://images.unsplash.com/photo-1707073687052-0edc1463d1f8?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=1600",
   },
   // ---------------- BOYACÁ ----------------
   {
@@ -651,7 +651,7 @@ export const EXPERIENCES: Experience[] = [
     },
     insights: { es: ["Glaciar a 5.330 msnm", "Páramo de frailejones", "Grupos pequeños programados", "Reserva: $150.000 anticipo"], en: ["Glacier at 5,330 masl", "Frailejones páramo", "Small scheduled groups", "Deposit: $150,000"] },
     impact: { es: "Guías locales certificados de Güicán.", en: "Certified local Güicán guides." },
-    image: "/src/assets/theme-adventure.jpg",
+    image: "https://i.pinimg.com/736x/fd/d5/e7/fdd5e7215c178ca104d1eb767a9d71b4.jpg",
   },
   {
     slug: "cocuy-termales",
@@ -670,7 +670,7 @@ export const EXPERIENCES: Experience[] = [
     },
     insights: { es: ["Trek a glaciar", "Termales naturales", "Pueblo de Güicán", "Aclimatación obligatoria"], en: ["Glacier trek", "Natural hot springs", "Güicán village", "Mandatory acclimation"] },
     impact: { es: "Familias campesinas de Güicán.", en: "Güicán peasant families." },
-    image: "/src/assets/theme-adventure.jpg",
+    image: "https://i.pinimg.com/736x/fd/d5/e7/fdd5e7215c178ca104d1eb767a9d71b4.jpg",
   },
   {
     slug: "tour-tunja",
@@ -689,7 +689,7 @@ export const EXPERIENCES: Experience[] = [
     },
     insights: { es: ["Casas coloniales", "Sitios independentistas", "Cocina boyacense", "Para parejas y culturales"], en: ["Colonial homes", "Independence sites", "Boyacá cuisine", "For couples and culture lovers"] },
     impact: { es: "Restaurantes y guías locales de Tunja.", en: "Local Tunja restaurants and guides." },
-    image: "/src/assets/theme-flavors.jpg",
+    image: "https://i.pinimg.com/1200x/72/76/b0/7276b09c97c5d8f168da7c151c5ee42b.jpg",
   },
   // ---------------- GUAVIARE ----------------
   {
@@ -709,7 +709,7 @@ export const EXPERIENCES: Experience[] = [
     },
     insights: { es: ["Murales rupestres de 10.000 años", "Serranía La Lindosa", "Río Guayabero", "Cerca de Chiribiquete"], en: ["10,000-year-old rock art", "La Lindosa range", "Guayabero river", "Near Chiribiquete"] },
     impact: { es: "Guías locales de San José del Guaviare.", en: "Local San José del Guaviare guides." },
-    image: "/src/assets/theme-eco.jpg",
+    image: "https://i.pinimg.com/1200x/48/ac/f1/48acf1b5ff9d80e77e2993b2cb051a97.jpg",
   },
   {
     slug: "guaviare-4-dias",
@@ -728,7 +728,7 @@ export const EXPERIENCES: Experience[] = [
     },
     insights: { es: ["Lindosa", "Murales rupestres", "Río Guayabero", "Comunidades locales"], en: ["Lindosa", "Rock art", "Guayabero river", "Local communities"] },
     impact: { es: "Guías locales de Guaviare.", en: "Local Guaviare guides." },
-    image: "/src/assets/theme-eco.jpg",
+    image: "https://i.pinimg.com/1200x/48/ac/f1/48acf1b5ff9d80e77e2993b2cb051a97.jpg",
   },
   {
     slug: "guaviare-3-dias",
@@ -747,7 +747,7 @@ export const EXPERIENCES: Experience[] = [
     },
     insights: { es: ["Murales rupestres", "Río Guayabero", "Lindosa concentrada", "Sin relleno"], en: ["Rock art", "Guayabero river", "Concentrated Lindosa", "No filler"] },
     impact: { es: "Guías locales de Guaviare.", en: "Local Guaviare guides." },
-    image: "/src/assets/theme-eco.jpg",
+    image: "https://i.pinimg.com/1200x/48/ac/f1/48acf1b5ff9d80e77e2993b2cb051a97.jpg",
   },
 ];
 
