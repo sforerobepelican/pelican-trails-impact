@@ -55,6 +55,7 @@ export interface ExperienceDetails {
   petsAllowed?: boolean;
   itinerary?: ItineraryDay[];
   includes?: { es: string[]; en: string[] };
+  notIncluded?: { es: string[]; en: string[] };
   meetingPoint?: { es: string; en: string };
   meetingPointMapUrl?: string;
   endingPoint?: { es: string; en: string };
