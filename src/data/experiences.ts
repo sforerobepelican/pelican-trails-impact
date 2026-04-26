@@ -296,7 +296,7 @@ export const EXPERIENCES: Experience[] = [
       en: ["Exclusive Wayúu Ulishamana community", "Cabo de la Vela and Pilón de Azúcar", "Lighthouse sunset + bonfire", "Pink flamingos at Manaure", "Lobster and Wayúu cuisine"],
     },
     impact: { es: "El plan se construyó con la comunidad Ulishamana — los ingresos apoyan su escuela.", en: "Built with the Ulishamana community — revenue supports their school." },
-    image: "https://images.unsplash.com/photo-1602002418082-dd4a8f7d2b2e?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=1600",
+    image: "https://i.pinimg.com/1200x/c8/83/ab/c883ab9e63b1937ffb72b50a02ef8c2c.jpg",
   },
   // ---------------- SANTA MARTA ----------------
   {
