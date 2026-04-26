@@ -326,6 +326,105 @@ export const EXPERIENCES: Experience[] = [
     },
     impact: { es: "El plan se construyó con la comunidad Ulishamana — los ingresos apoyan su escuela.", en: "Built with the Ulishamana community — revenue supports their school." },
     image: "https://i.pinimg.com/1200x/c8/83/ab/c883ab9e63b1937ffb72b50a02ef8c2c.jpg",
+    details: {
+      about: {
+        es: "Existe un rincón del mundo donde el desierto se derrama sobre el Caribe, donde el viento no ha parado en siglos y donde el tiempo funciona distinto. La Guajira de este viaje no es la que aparece en las búsquedas. Es la que se siente cuando una mujer Wayúu enseña a tejer sin que nadie se lo haya pedido, cuando el sol tiñe de naranja una tierra que parece de otro planeta, cuando te das cuenta de que llevas horas sin mirar el teléfono y no te importa en lo absoluto. No es un viaje que se planea para contarlo. Es uno que se lleva adentro mucho después de haber vuelto.",
+        en: "There's a corner of the world where the desert spills into the Caribbean, where the wind hasn't stopped in centuries and where time works differently. The Guajira of this trip is not the one that shows up in searches. It's the one you feel when a Wayúu woman teaches you to weave without anyone asking, when the sun turns an otherworldly land orange, when you realize you've gone hours without checking your phone and don't care at all. It's not a trip you plan to talk about. It's one you carry inside long after returning.",
+      },
+      difficultyNote: { es: "Baja", en: "Low" },
+      maxPeople: 15,
+      itinerary: [
+        {
+          title: { es: "Día 1 — El día que Ulishamana abre sus puertas", en: "Day 1 — The day Ulishamana opens its doors" },
+          body: {
+            es: [
+              "El viaje empieza desde que suben a la camioneta. Una 4x4 los recoge en el aeropuerto y desde ese momento el ritmo cambia. Antes de salir de la ciudad, tienen tiempo para abastecerse de productos de aseo o lo que necesiten para viajar cómodos.",
+              "Después, el asfalto se vuelve polvo y el polvo se vuelve desierto. El primer destino es Ulishamana: una comunidad Wayúu que no recibe a cualquier visitante. No es un set turístico ni una recreación cultural. Es una comunidad real, viva, que ha elegido abrirles sus puertas de forma exclusiva. No hay otro grupo, solo la comunidad y lo que ese día tenga para ofrecer: taller de tejido, pintura facial tradicional con su significado, el toque de la Yonna y una cata de Yotshi, el licor sagrado Wayúu, una manta Wayúu para las mujeres y un sombrero típico para los hombres.",
+              "Todo lo que vivan ahí tiene siglos de historia detrás y debe ser recibido con la misma seriedad con que se ofrece. El día termina con almuerzo y cena típica de la región, pescado fresco de temporada. Si hay alguna restricción alimentaria, se coordina con anticipación.",
+            ],
+            en: [
+              "The trip starts the moment you get in the truck. A 4x4 picks you up at the airport and from then on the pace changes. Before leaving the city you have time to stock up on toiletries or whatever you need to travel comfortably.",
+              "Then asphalt turns to dust, and dust turns to desert. The first destination is Ulishamana: a Wayúu community that doesn't host just anyone. It's not a tourist set or a cultural recreation. It's a real, living community that has chosen to open its doors exclusively to you. No other group — just the community and what the day brings: a weaving workshop, traditional face painting with its meaning, the rhythm of the Yonna dance and a Yotshi tasting (the sacred Wayúu liquor), a Wayúu manta for the women and a traditional hat for the men.",
+              "Everything you live there carries centuries of history and must be received with the same seriousness with which it is offered. The day ends with lunch and a typical regional dinner — fresh seasonal fish. Any dietary restrictions are coordinated in advance.",
+            ],
+          },
+        },
+        {
+          title: { es: "Día 2 — Siendo Wayúu, sin más", en: "Day 2 — Being Wayúu, simply" },
+          body: {
+            es: [
+              "El desayuno no tiene afán. Un chinchorro, la enramada, el sonido del viento y una conversación que solo puede darse cuando eres parte de la comunidad. Las personas están ahí para responder lo que el día anterior no se pudo contestar.",
+              "Si el viaje es entre semana, hay posibilidad de visitar la escuela de la comunidad. Se llevan refrigerios para los niños y se acompañan las clases con los profesores. Los fines de semana la escuela no abre, pero la ranchería sigue viva con sus propias rutinas, y los refrigerios se reparten ahí, entre los niños de la comunidad. Es uno de esos momentos que no estaba en ningún plan pero que termina siendo el más recordado.",
+              "Sobre el mediodía, cuando ya el sol pega fuerte y la comunidad retoma su ritmo, llega el momento de agradecer y seguir. La camioneta los espera. En el camino se almuerza en Uribia, capital indígena de Colombia. Y si el clima y la ruta lo permiten, llegar justo a tiempo para ver cómo el sol cae sobre el mar desde el balcón de la habitación frente al mar.",
+              "En la noche: cena de bienvenida con langosta de pesca local. Y después, cuando los platos se recogen y el ruido del día se apaga, una fogata frente al mar. De un lado el fuego, del otro el Caribe.",
+            ],
+            en: [
+              "Breakfast has no rush. A chinchorro hammock, the enramada shade, the sound of the wind and a conversation that can only happen when you're part of the community. People are there to answer what the previous day couldn't.",
+              "If the trip is on a weekday, there's a chance to visit the community school. You bring snacks for the children and join classes with the teachers. On weekends the school is closed, but the ranchería is still alive with its own routines, and snacks are shared there, among the community children. It's one of those moments that wasn't on any itinerary but ends up being the most remembered.",
+              "Around midday, when the sun hits hard and the community returns to its rhythm, it's time to give thanks and move on. The truck is waiting. On the way you'll have lunch in Uribia, indigenous capital of Colombia. And if the weather and route allow, you'll arrive just in time to watch the sun fall over the sea from the balcony of your oceanfront room.",
+              "At night: welcome dinner with locally caught lobster. And afterward, when the plates are cleared and the day's noise fades, a bonfire facing the sea. On one side, fire. On the other, the Caribbean.",
+            ],
+          },
+        },
+        {
+          title: { es: "Día 3 — Jepirra: el lugar donde los vivos entienden a los que ya no están", en: "Day 3 — Jepirra: where the living understand those who are gone" },
+          body: {
+            es: [
+              "Hay lugares que se entienden solo cuando se está parado en ellos. El Pilón de Azúcar es uno de esos. En quince minutos de subida llegan a una vista de 360 grados sobre el Cabo: de un lado, el mar que golpea fuerte contra las rocas; del otro, una calma que parece no pertenecer al mismo océano.",
+              "Para el pueblo Wayúu, este lugar no es solo paisaje. El Cabo de la Vela es Jepirra, el destino final de las almas. Según su cosmología, cuando alguien muere, su espíritu camina hasta aquí, hasta este punto donde la tierra se acaba y el mar empieza, para hacer su último viaje. Es el umbral entre este mundo y el siguiente. Por eso el viento nunca para. Por eso el mar golpea así.",
+              "La tarde es más libre. Almuerzo a elección propia en el pueblo, el guía tiene sus recomendaciones, pero la decisión es de ustedes. Después, la camioneta los lleva al Mirador Tortuga y a Playa Ojo de Agua: tiempo para caminar, fotografiar, sentarse. El día cierra en el faro, esperando el atardecer. Cuando el sol baja y el faro enciende, se van al hotel. Cena frente al mar con mero de temporada.",
+            ],
+            en: [
+              "Some places you only understand by standing in them. Pilón de Azúcar is one. A 15-minute climb takes you to a 360° view over the Cabo: on one side, the sea pounding the rocks; on the other, a stillness that doesn't seem to belong to the same ocean.",
+              "For the Wayúu, this place is not just scenery. Cabo de la Vela is Jepirra, the final destination of souls. According to their cosmology, when someone dies their spirit walks here, to this point where land ends and sea begins, to make its final journey. It is the threshold between this world and the next. That's why the wind never stops. That's why the sea hits like that.",
+              "The afternoon is freer. Lunch of your choice in the village — the guide has recommendations, but the decision is yours. Afterward the truck takes you to Mirador Tortuga and Playa Ojo de Agua: time to walk, photograph, sit. The day closes at the lighthouse, waiting for sunset. When the sun drops and the lighthouse lights, you head back to the hotel. Dinner facing the sea with seasonal grouper.",
+            ],
+          },
+        },
+        {
+          title: { es: "Día 4 — La sal de la tierra y el sabor de lo que fuiste", en: "Day 4 — The salt of the earth and the taste of who you were" },
+          body: {
+            es: ["Día de cierre con visita a Manaure y los flamencos rosados, regreso al aeropuerto y despedida."],
+            en: ["Closing day with a visit to Manaure and the pink flamingos, return to the airport and farewell."],
+          },
+        },
+      ],
+      flexibleSchedule: true,
+      climate: {
+        temperature: { es: "Entre 27 °C y 32 °C", en: "Between 27 °C and 32 °C" },
+        bestSeason: {
+          es: "La mejor época para viajar es de diciembre a abril, cuando las lluvias prácticamente desaparecen y el cielo se mantiene despejado. De mayo a noviembre hay presencia de lluvias ocasionales. El viento fuerte es una constante en el Cabo de la Vela en cualquier época y hace parte de la experiencia.",
+          en: "The best time to travel is December to April, when rains practically disappear and the sky stays clear. From May to November there are occasional rains. Strong wind is a constant at Cabo de la Vela in any season and is part of the experience.",
+        },
+      },
+      recommendations: {
+        es: [
+          "Ropa ligera y de colores claros. El sol pega fuerte desde temprano",
+          "Protector solar de alta protección y gafas de sol; el reflejo en el desierto y el agua es intenso",
+          "Sombrero o gorra, imprescindible durante el día",
+          "Repelente de insectos para las noches",
+          "Calzado cómodo para caminar en arena y terreno irregular",
+          "Ropa de baño y toalla",
+          "Efectivo en pesos colombianos. No hay cajeros en el Cabo de la Vela ni en la zona del desierto",
+          "Mente abierta y disposición para conectar. Las comunidades que se visitan merecen presencia real, no solo una cámara",
+        ],
+        en: [
+          "Light, light-colored clothing. The sun hits hard from early on",
+          "High-protection sunscreen and sunglasses; the glare on desert and water is intense",
+          "Hat or cap, essential during the day",
+          "Insect repellent for the nights",
+          "Comfortable footwear for sand and uneven terrain",
+          "Swimwear and towel",
+          "Cash in Colombian pesos. There are no ATMs at Cabo de la Vela or in the desert zone",
+          "Open mind and willingness to connect. The communities you visit deserve real presence, not just a camera",
+        ],
+      },
+      arrivalTips: {
+        es: "Una vez sepas del vuelo, avísanos para coordinar la recogida saliendo del aeropuerto.",
+        en: "Once you know your flight, let us know so we can coordinate pickup at the airport exit.",
+      },
+      cancellation: { es: "Flexible", en: "Flexible" },
+    },
   },
   // ---------------- SANTA MARTA ----------------
   {
