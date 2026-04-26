@@ -11,7 +11,7 @@ import { Seo } from "@/components/Seo";
 import { useLang } from "@/hooks/useLang";
 import { supabase } from "@/integrations/supabase/client";
 
-const WHATSAPP_NUMBER = "573135525944";
+const WHATSAPP_NUMBER = "+573135525944";
 
 const schema = z.object({
   name: z.string().trim().min(1).max(120),
