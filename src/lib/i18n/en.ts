@@ -69,6 +69,7 @@ export const en = {
     aboutTitle: "About this experience",
     itinerary: "Day-by-day itinerary",
     includes: "What's included",
+    notIncluded: "What's not included",
     meetingPoint: "Meeting point",
     endingPoint: "Ending point",
     startTime: "Start time",
