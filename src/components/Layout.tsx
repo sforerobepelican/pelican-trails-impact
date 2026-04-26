@@ -1,11 +1,14 @@
-import { Outlet, useLocation } from "react-router-dom";
+"use client";
+
+import { useLocation } from "react-router-dom";
+import type { ReactNode } from "react";
 import { Navbar } from "./Navbar";
 import { Footer } from "./Footer";
 import { useLang } from "@/hooks/useLang";
 import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 
-export function Layout() {
+export function Layout({ children }: { children?: ReactNode }) {
   const lang = useLang();
   const { i18n } = useTranslation();
   const { pathname } = useLocation();
@@ -23,7 +26,7 @@ export function Layout() {
     <div className="min-h-screen flex flex-col">
       <Navbar />
       <main className="flex-1 pt-20">
-        <Outlet />
+        {children}
       </main>
       <Footer />
     </div>

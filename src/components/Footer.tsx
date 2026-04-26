@@ -15,7 +15,7 @@ export function Footer() {
       <div className="container py-14 grid gap-12 md:grid-cols-4">
         <div className="md:col-span-2">
           <div className="flex items-center gap-3 mb-4">
-            <img src={logo} alt="BePelican" width={48} height={48} className="h-12 w-12 brightness-0 invert" />
+            <img src={logo.src} alt="BePelican" width={48} height={48} className="h-12 w-12 brightness-0 invert" />
             <span className="font-display text-2xl">BePelican</span>
           </div>
           <p className="text-sm text-secondary-foreground/80 max-w-md">

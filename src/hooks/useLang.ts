@@ -3,8 +3,12 @@ import { useEffect, useState } from "react";
 import type { Lang } from "@/lib/i18n";
 
 export function useLang(): Lang {
-  const { lang } = useParams();
-  return lang === "en" ? "en" : "es";
+  // Next App Router uses the dynamic segment name [locale]; the legacy
+  // react-router-dom routes used :lang. The shim returns whatever Next
+  // exposes, so we accept both keys.
+  const params = useParams() as { locale?: string; lang?: string };
+  const value = params.locale ?? params.lang;
+  return value === "en" ? "en" : "es";
 }
 
 export function useLocalizedPath() {
