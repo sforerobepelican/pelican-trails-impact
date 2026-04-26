@@ -281,7 +281,8 @@ export const EXPERIENCES: Experience[] = [
     durationDays: 4,
     difficulty: "easy",
     pace: { es: "Apto para todos", en: "Suitable for all" },
-    priceCOP: null,
+    priceCOP: 2080000,
+    priceNote: { es: "Por persona · hasta 15 personas", en: "Per person · up to 15 people" },
     name: { es: "Inmersión Wayúu — Cabo de la Vela", en: "Wayúu Immersion — Cabo de la Vela" },
     hook: {
       es: "Comunidad Ulishamana en exclusiva, taller de tejido, Yonna y cata de Yotshi.",
@@ -445,7 +446,7 @@ export const EXPERIENCES: Experience[] = [
     durationDays: 1,
     difficulty: "moderate",
     pace: { es: "Moderado", en: "Moderate" },
-    priceCOP: 60000,
+    priceCOP: 80000,
     priceNote: { es: "Por persona", en: "Per person" },
     name: { es: "El Tour de La Perse", en: "The La Perse Tour" },
     hook: { es: "Barrio obrero histórico: chicha, calle de los abrazos, monumento del silencio.", en: "Historic working-class neighborhood: chicha, street of hugs, monument of silence." },
@@ -544,7 +545,8 @@ export const EXPERIENCES: Experience[] = [
     durationDays: 1,
     difficulty: "moderate",
     pace: { es: "Media", en: "Medium" },
-    priceCOP: null,
+    priceCOP: 160000,
+    priceNote: { es: "Por persona", en: "Per person" },
     name: { es: "Monserrate — El mirador sagrado", en: "Monserrate — The Sacred Lookout" },
     hook: { es: "Funicular, teleférico o sendero. La postal de Bogotá.", en: "Funicular, cable car or trail. The Bogotá postcard." },
     description: {
