@@ -1,6 +1,6 @@
 import { Link, useParams, Navigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { Clock, MapPin, TrendingUp, Heart, Check, ArrowLeft, Users, Languages, PawPrint, Calendar, Thermometer, ExternalLink } from "lucide-react";
+import { Clock, MapPin, TrendingUp, Heart, Check, X, ArrowLeft, Users, Languages, PawPrint, Calendar, Thermometer, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Seo } from "@/components/Seo";
 import { ExperienceCard } from "@/components/ExperienceCard";
