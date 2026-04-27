@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import ExperienceDetailClient from "../../../_clients/ExperienceDetail";
 import { getExperienceBySlug, ZONES } from "@/data/experiences";
-import { buildMetadata, touristTripJsonLd, tourStaticParams, type Lang } from "@/lib/seo";
+import { breadcrumbJsonLd, buildMetadata, touristTripJsonLd, tourStaticParams, type Lang } from "@/lib/seo";
 
 export const dynamic = "force-static";
 
@@ -59,6 +59,21 @@ export default async function Page({
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(touristTripJsonLd(exp, locale)) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            breadcrumbJsonLd([
+              { name: locale === "es" ? "Inicio" : "Home", path: `/${locale}` },
+              {
+                name: locale === "es" ? "Destinos" : "Destinations",
+                path: locale === "es" ? "/es/destinos" : "/en/destinations",
+              },
+              { name: exp.name[locale], path: `/${locale}/tour/${exp.slug}` },
+            ]),
+          ),
+        }}
       />
       <ExperienceDetailClient />
     </>

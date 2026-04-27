@@ -7,10 +7,10 @@ export const en = {
     bookNow: "Book now",
   },
   hero: {
-    eyebrow: "Community tourism in Colombia",
-    title: "The more you travel, the more you give back.",
+    eyebrow: "Travel with real impact",
+    title: "Community tourism in Colombia",
     subtitle:
-      "Discover tours and authentic experiences in Colombia designed with local communities. Every booking creates real impact and purposeful travel.",
+      "Discover tours and authentic experiences in Colombia designed with local communities. The more you travel, the more you give back.",
     ctaPrimary: "Explore tours in Colombia",
     ctaSecondary: "Plan a trip to Colombia",
   },
@@ -46,6 +46,27 @@ export const en = {
     ],
     ctaTitle: "Ready for your next purposeful trip?",
     ctaBody: "Tell us what moves you and we'll design the perfect trip together.",
+    pressEyebrow: "As seen in",
+    pressTitle: "An impact travel brand recognized by global organizations and media",
+    pressLogos: ["World Economic Forum", "El Espectador"],
+    faqTitle: "Frequently asked questions about community tourism in Colombia",
+    faqItems: [
+      {
+        question: "What is community tourism in Colombia?",
+        answer:
+          "It is a way of traveling where local communities directly shape, host and benefit from the experience, creating real economic and cultural impact.",
+      },
+      {
+        question: "Does BePelican organize private tours or custom trips?",
+        answer:
+          "Yes. We can design custom trips for couples, families, groups, corporate teams and travelers looking for authentic experiences in Colombia.",
+      },
+      {
+        question: "Which community tourism destinations does BePelican offer?",
+        answer:
+          "We offer experiences in the Amazon, La Guajira, Sierra Nevada, Medellin, Bogota, Boyaca, Cundinamarca and Guaviare, among other destinations with local communities.",
+      },
+    ],
   },
   destinations: {
     title: "Community tourism tours and experiences in Colombia",

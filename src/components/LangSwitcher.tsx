@@ -1,5 +1,5 @@
 import { useLocation, useNavigate } from "react-router-dom";
-import { useLang } from "@/hooks/useLang";
+import { switchLocalePath, useLang } from "@/hooks/useLang";
 import { useTranslation } from "react-i18next";
 import { Globe } from "lucide-react";
 
@@ -11,7 +11,7 @@ export function LangSwitcher() {
 
   const toggle = () => {
     const next = lang === "es" ? "en" : "es";
-    const newPath = pathname.replace(/^\/(es|en)/, `/${next}`);
+    const newPath = switchLocalePath(pathname, next);
     i18n.changeLanguage(next);
     navigate(newPath || `/${next}`);
   };

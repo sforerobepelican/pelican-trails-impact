@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { notFound } from "next/navigation";
+import { notFound, redirect } from "next/navigation";
 import ThemesClient from "../../_clients/Themes";
 import { buildMetadata, type Lang } from "@/lib/seo";
 
@@ -36,5 +36,6 @@ export async function generateMetadata({
 export default async function Page({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   if (!isLocale(locale)) notFound();
+  if (locale === "en") redirect("/en/themes");
   return <ThemesClient />;
 }

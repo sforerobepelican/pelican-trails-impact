@@ -7,10 +7,10 @@ export const es = {
     bookNow: "Reservar ahora",
   },
   hero: {
-    eyebrow: "Turismo comunitario en Colombia",
-    title: "Entre más viajas, más ayudas.",
+    eyebrow: "Viajes con impacto real",
+    title: "Turismo comunitario en Colombia",
     subtitle:
-      "Descubre tours y experiencias auténticas en Colombia diseñadas con comunidades locales. Cada reserva genera impacto real y un viaje con propósito.",
+      "Descubre tours y experiencias auténticas en Colombia diseñadas con comunidades locales. Entre más viajas, más ayudas.",
     ctaPrimary: "Explorar tours en Colombia",
     ctaSecondary: "Planear viaje a Colombia",
   },
@@ -46,6 +46,27 @@ export const es = {
     ],
     ctaTitle: "¿Listo para tu próximo viaje con propósito?",
     ctaBody: "Cuéntanos qué te mueve y diseñamos contigo el viaje perfecto.",
+    pressEyebrow: "As seen in",
+    pressTitle: "Una marca de turismo de impacto reconocida por medios y organizaciones globales",
+    pressLogos: ["World Economic Forum", "El Espectador"],
+    faqTitle: "Preguntas frecuentes sobre turismo comunitario en Colombia",
+    faqItems: [
+      {
+        question: "¿Qué es el turismo comunitario en Colombia?",
+        answer:
+          "Es una forma de viajar en la que las comunidades locales participan directamente en el diseño, la operación y los beneficios de la experiencia, generando impacto económico y cultural real.",
+      },
+      {
+        question: "¿BePelican organiza tours privados o viajes a medida?",
+        answer:
+          "Sí. Podemos diseñar viajes a medida para parejas, familias, grupos de amigos, equipos corporativos y viajeros que buscan experiencias auténticas en Colombia.",
+      },
+      {
+        question: "¿Qué destinos de turismo comunitario ofrece BePelican?",
+        answer:
+          "Ofrecemos experiencias en Amazonas, La Guajira, Sierra Nevada, Medellín, Bogotá, Boyacá, Cundinamarca y Guaviare, entre otros destinos con comunidades locales.",
+      },
+    ],
   },
   destinations: {
     title: "Tours y experiencias de turismo comunitario en Colombia",

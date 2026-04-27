@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { notFound } from "next/navigation";
+import { notFound, redirect } from "next/navigation";
 import ContactClient from "../../_clients/Contact";
 import { buildMetadata, type Lang } from "@/lib/seo";
 
@@ -20,7 +20,7 @@ export async function generateMetadata({
     pathEn: "/en/contact",
     title:
       locale === "es"
-        ? "Planear Viaje a Colombia con Turismo Comunitario | BePelican"
+        ? "Planear Viaje a Colombia | BePelican"
         : "Plan a Community Tourism Trip to Colombia | BePelican",
     description:
       locale === "es"
@@ -36,5 +36,6 @@ export async function generateMetadata({
 export default async function Page({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   if (!isLocale(locale)) notFound();
+  if (locale === "en") redirect("/en/contact");
   return <ContactClient />;
 }

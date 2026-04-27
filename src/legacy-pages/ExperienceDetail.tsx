@@ -7,9 +7,10 @@ import { ExperienceCard } from "@/components/ExperienceCard";
 import { CTASection } from "@/components/CTASection";
 import { EXPERIENCES, getExperienceBySlug, ZONES, THEMES } from "@/data/experiences";
 import { useLang, useLocalizedPath, formatPriceLocalized, useTrm } from "@/hooks/useLang";
+import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbPage, BreadcrumbSeparator } from "@/components/ui/breadcrumb";
 
 export default function ExperienceDetail() {
-  const { slug } = useParams();
+  const { slug } = (useParams() ?? {}) as { slug?: string };
   const { t } = useTranslation();
   const lang = useLang();
   const lp = useLocalizedPath();
@@ -53,6 +54,25 @@ export default function ExperienceDetail() {
           <div className="absolute inset-0 bg-gradient-to-t from-secondary via-secondary/40 to-transparent" />
         </div>
         <div className="container -mt-32 relative z-10">
+          <Breadcrumb className="mb-4 text-primary-foreground/90">
+            <BreadcrumbList>
+              <BreadcrumbItem>
+                <BreadcrumbLink asChild>
+                  <Link to={lp("")}>{lang === "es" ? "Inicio" : "Home"}</Link>
+                </BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbSeparator />
+              <BreadcrumbItem>
+                <BreadcrumbLink asChild>
+                  <Link to={lp("destinos")}>{t("nav.destinations")}</Link>
+                </BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbSeparator />
+              <BreadcrumbItem>
+                <BreadcrumbPage>{e.name[lang]}</BreadcrumbPage>
+              </BreadcrumbItem>
+            </BreadcrumbList>
+          </Breadcrumb>
           <Link to={lp("destinos")} className="inline-flex items-center gap-2 text-primary-foreground/90 hover:text-primary-foreground text-sm mb-4">
             <ArrowLeft className="h-4 w-4" /> {t("nav.destinations")}
           </Link>

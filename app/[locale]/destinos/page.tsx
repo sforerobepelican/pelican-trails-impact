@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { notFound } from "next/navigation";
+import { notFound, redirect } from "next/navigation";
 import DestinationsClient from "../../_clients/Destinations";
 import { buildMetadata, type Lang } from "@/lib/seo";
 
@@ -20,8 +20,8 @@ export async function generateMetadata({
     pathEn: "/en/destinations",
     title:
       locale === "es"
-        ? "Tours y Experiencias de Turismo Comunitario en Colombia | BePelican"
-        : "Community Tourism Tours & Experiences in Colombia | BePelican",
+        ? "Tours de Turismo Comunitario en Colombia | BePelican"
+        : "Colombia Community Tourism Destinations | BePelican",
     description:
       locale === "es"
         ? "Explora tours y experiencias de turismo comunitario en Colombia: Amazonas, Guajira, Sierra Nevada, Medellín, Bogotá y más, con comunidades locales."
@@ -36,5 +36,6 @@ export async function generateMetadata({
 export default async function Page({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   if (!isLocale(locale)) notFound();
+  if (locale === "en") redirect("/en/destinations");
   return <DestinationsClient />;
 }

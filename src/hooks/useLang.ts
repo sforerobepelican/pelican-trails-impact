@@ -2,11 +2,22 @@ import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import type { Lang } from "@/lib/i18n";
 
+const LOCALIZED_SEGMENTS = {
+  destinos: { es: "destinos", en: "destinations" },
+  destinations: { es: "destinos", en: "destinations" },
+  tematicas: { es: "tematicas", en: "themes" },
+  themes: { es: "tematicas", en: "themes" },
+  contacto: { es: "contacto", en: "contact" },
+  contact: { es: "contacto", en: "contact" },
+  privacidad: { es: "privacidad", en: "privacy" },
+  privacy: { es: "privacidad", en: "privacy" },
+} as const;
+
 export function useLang(): Lang {
   // Next App Router uses the dynamic segment name [locale]; the legacy
   // react-router-dom routes used :lang. The shim returns whatever Next
   // exposes, so we accept both keys.
-  const params = useParams() as { locale?: string; lang?: string };
+  const params = (useParams() ?? {}) as { locale?: string; lang?: string };
   const value = params.locale ?? params.lang;
   return value === "en" ? "en" : "es";
 }
@@ -14,9 +25,25 @@ export function useLang(): Lang {
 export function useLocalizedPath() {
   const lang = useLang();
   return (path: string) => {
-    const clean = path.replace(/^\//, "");
-    return clean ? `/${lang}/${clean}` : `/${lang}`;
+    return localizePathForLang(path, lang);
   };
+}
+
+export function localizePathForLang(path: string, lang: Lang) {
+  const clean = path.replace(/^\//, "");
+  if (!clean) return `/${lang}`;
+
+  const [first, ...rest] = clean.split("/");
+  const mapped = LOCALIZED_SEGMENTS[first as keyof typeof LOCALIZED_SEGMENTS];
+  const localizedFirst = mapped ? mapped[lang] : first;
+  const suffix = rest.length ? `/${rest.join("/")}` : "";
+
+  return `/${lang}/${localizedFirst}${suffix}`;
+}
+
+export function switchLocalePath(pathname: string, nextLang: Lang) {
+  const stripped = pathname.replace(/^\/(es|en)/, "").replace(/^\//, "");
+  return localizePathForLang(stripped, nextLang);
 }
 
 export function formatPriceCOP(value: number, lang: Lang) {

@@ -20,6 +20,8 @@ export default function Home() {
     .filter((e): e is NonNullable<typeof e> => Boolean(e));
   const steps = t("home.howSteps", { returnObjects: true }) as { title: string; body: string }[];
   const highlights = t("home.introHighlights", { returnObjects: true }) as string[];
+  const pressLogos = t("home.pressLogos", { returnObjects: true }) as string[];
+  const faqItems = t("home.faqItems", { returnObjects: true }) as { question: string; answer: string }[];
   const stepIcons = [Compass, Sparkles, MessageCircle];
 
   return (
@@ -98,6 +100,25 @@ export default function Home() {
         </p>
       </section>
 
+      <section className="container my-20">
+        <div className="rounded-3xl border border-border bg-card p-8 md:p-10">
+          <p className="text-xs font-semibold uppercase tracking-[0.24em] text-primary mb-3">
+            {t("home.pressEyebrow")}
+          </p>
+          <h2 className="text-3xl md:text-4xl mb-6 max-w-3xl text-balance">{t("home.pressTitle")}</h2>
+          <div className="flex flex-wrap gap-3">
+            {pressLogos.map((logo) => (
+              <span
+                key={logo}
+                className="inline-flex items-center rounded-full border border-border bg-background px-4 py-2 text-sm font-semibold text-foreground"
+              >
+                {logo}
+              </span>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Featured */}
       <section className="container my-20">
         <div className="flex flex-wrap items-end justify-between mb-10 gap-4">
@@ -136,6 +157,19 @@ export default function Home() {
       </section>
 
       <ImpactSection />
+
+      <section className="container my-24 max-w-4xl">
+        <h2 className="text-4xl md:text-5xl mb-8 text-balance">{t("home.faqTitle")}</h2>
+        <div className="space-y-5">
+          {faqItems.map((item) => (
+            <article key={item.question} className="rounded-2xl border border-border bg-card p-6">
+              <h3 className="text-2xl mb-3">{item.question}</h3>
+              <p className="text-muted-foreground leading-relaxed">{item.answer}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
       <CTASection />
     </>
   );

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import HomeClient from "../_clients/Home";
-import { buildMetadata, type Lang } from "@/lib/seo";
+import { buildMetadata, faqPageJsonLd, getDict, type Lang } from "@/lib/seo";
 
 export const dynamic = "force-static";
 
@@ -20,12 +20,12 @@ export async function generateMetadata({
     pathEn: "/en",
     title:
       locale === "es"
-        ? "Turismo Comunitario en Colombia | Tours y Experiencias Auténticas | BePelican"
-        : "Community Tourism in Colombia | Authentic Tours & Experiences | BePelican",
+        ? "Turismo Comunitario Colombia | Tours Auténticos | BePelican"
+        : "Community Tourism Colombia | Authentic Tours | BePelican",
     description:
       locale === "es"
-        ? "Descubre tours y experiencias de turismo comunitario en Colombia. Viaja con propósito, conecta con comunidades locales y reserva una aventura auténtica con impacto real."
-        : "Discover community tourism tours and experiences in Colombia. Travel with purpose, connect with local communities and book an authentic adventure with real impact.",
+        ? "Descubre tours de turismo comunitario en Colombia. Viaja con propósito, conecta con comunidades locales y vive una aventura auténtica. Reserva ya."
+        : "Discover community tourism in Colombia. Travel with purpose, connect with local communities and book an authentic adventure with real impact.",
     keywords:
       locale === "es"
         ? ["turismo comunitario en Colombia", "tours en Colombia", "experiencias auténticas en Colombia", "viajes con propósito", "comunidades locales Colombia"]
@@ -36,5 +36,16 @@ export async function generateMetadata({
 export default async function Page({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   if (!isLocale(locale)) notFound();
-  return <HomeClient />;
+  const dict = getDict(locale);
+  const faqItems = dict.home.faqItems;
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqPageJsonLd(faqItems)) }}
+      />
+      <HomeClient />
+    </>
+  );
 }
