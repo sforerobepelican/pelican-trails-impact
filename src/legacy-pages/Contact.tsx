@@ -9,7 +9,7 @@ import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
 import { Seo } from "@/components/Seo";
 import { useLang } from "@/hooks/useLang";
-import { supabase } from "@/integrations/supabase/client";
+import { createClient } from "@/utils/supabase/client";
 
 const WHATSAPP_NUMBER = "+573135525944";
 
@@ -23,6 +23,7 @@ const schema = z.object({
 export default function Contact() {
   const { t } = useTranslation();
   const lang = useLang();
+  const supabase = createClient();
   const [form, setForm] = useState({ name: "", email: "", whatsapp: "", message: "" });
   const [submitting, setSubmitting] = useState(false);
 
