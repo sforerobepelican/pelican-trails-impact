@@ -3,28 +3,6 @@ import Script from "next/script";
 import "@/index.css";
 import { SITE_URL } from "@/lib/seo";
 
-import { GoogleTagManager } from '@next/third-parties/google'
-
-export default function RootLayout({ children }) {
-  return (
-    <html lang="es">
-      <body>
-        {/* GTM noscript — inmediatamente después de <body> */}
-        <noscript>
-          <iframe
-            src="https://www.googletagmanager.com/ns.html?id=GTM-MSCG8ZS2"
-            height="0" width="0"
-            style={{ display: 'none', visibility: 'hidden' }}
-          />
-        </noscript>
-
-        {children}
-        <GoogleTagManager gtmId="GTM-MSCG8ZS2" />
-      </body>
-    </htm>
-  )
-}
-
 /**
  * Root layout — server component. Renders <html>/<body>; per-locale layout
  * sets the html lang attribute through the [locale] segment.

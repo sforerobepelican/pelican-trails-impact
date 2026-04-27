@@ -1,9 +1,10 @@
-export default async function NotFound({
-  params,
-}: {
-  params: Promise<{ locale: string }>;
-}) {
-  const { locale } = await params;
+"use client";
+
+import { usePathname } from "next/navigation";
+
+export default function NotFound() {
+  const pathname = usePathname();
+  const locale = pathname?.startsWith("/en") ? "en" : "es";
   const home = locale === "en" ? "/en" : "/es";
 
   return (
