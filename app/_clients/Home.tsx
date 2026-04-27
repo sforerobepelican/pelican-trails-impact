@@ -1,4 +1,4 @@
 "use client";
 import dynamic from "next/dynamic";
 
-export default dynamic(() => import("@/pages/Home"), { ssr: false });
+export default dynamic(() => import("@/legacy-pages/Home"), { ssr: false });

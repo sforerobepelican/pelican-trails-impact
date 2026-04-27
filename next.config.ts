@@ -5,6 +5,7 @@ const config: NextConfig = {
   // Force the app to render every locale × route at build time so the catalog
   // is fully crawlable HTML and i18next state is locale-correct per file.
   output: "standalone",
+  outputFileTracingRoot: __dirname,
   images: {
     // Existing asset hosts referenced by experiences.ts and Lovable previews.
     remotePatterns: [
