@@ -20,12 +20,16 @@ export async function generateMetadata({
     pathEn: "/en/themes",
     title:
       locale === "es"
-        ? "Temáticas de Viaje en Colombia | BePelican"
-        : "Travel Themes in Colombia | BePelican",
+        ? "Temáticas de Turismo Comunitario en Colombia | BePelican"
+        : "Community Tourism Travel Themes in Colombia | BePelican",
     description:
       locale === "es"
-        ? "Encuentra el viaje según lo que te mueve: aventura, ecoturismo, cultura ancestral, gastronomía, patrimonio y más."
-        : "Find the trip that matches what moves you: adventure, ecotourism, ancestral culture, food, heritage and more.",
+        ? "Explora temáticas de turismo comunitario en Colombia: aventura, ecoturismo, gastronomía local, patrimonio, cultura ancestral y más."
+        : "Explore community tourism travel themes in Colombia: adventure, ecotourism, local food, heritage, ancestral culture and more.",
+    keywords:
+      locale === "es"
+        ? ["temáticas de viaje en Colombia", "turismo comunitario en Colombia", "ecoturismo Colombia", "cultura ancestral Colombia", "gastronomía local Colombia"]
+        : ["travel themes in Colombia", "community tourism in Colombia", "ecotourism Colombia", "ancestral culture Colombia", "local food Colombia"],
   });
 }
 

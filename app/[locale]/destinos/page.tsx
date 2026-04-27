@@ -20,12 +20,16 @@ export async function generateMetadata({
     pathEn: "/en/destinations",
     title:
       locale === "es"
-        ? "Destinos & Experiencias en Colombia | BePelican"
-        : "Destinations & Experiences in Colombia | BePelican",
+        ? "Tours y Experiencias de Turismo Comunitario en Colombia | BePelican"
+        : "Community Tourism Tours & Experiences in Colombia | BePelican",
     description:
       locale === "es"
-        ? "Explora todas las experiencias de turismo comunitario en Colombia: Amazonas, Guajira, Sierra Nevada, Medellín, Bogotá y más."
-        : "Explore all community tourism experiences in Colombia: Amazon, Guajira, Sierra Nevada, Medellín, Bogotá and more.",
+        ? "Explora tours y experiencias de turismo comunitario en Colombia: Amazonas, Guajira, Sierra Nevada, Medellín, Bogotá y más, con comunidades locales."
+        : "Explore community tourism tours and experiences in Colombia: Amazon, Guajira, Sierra Nevada, Medellin, Bogota and more, designed with local communities.",
+    keywords:
+      locale === "es"
+        ? ["tours en Colombia", "experiencias en Colombia", "turismo comunitario en Colombia", "viajes en Amazonas y Guajira", "ecoturismo Colombia"]
+        : ["tours in Colombia", "experiences in Colombia", "community tourism in Colombia", "Amazon and Guajira trips", "ecotourism Colombia"],
   });
 }
 

@@ -33,6 +33,7 @@ export function buildMetadata({
   description,
   image,
   type = "website",
+  keywords,
 }: {
   lang: Lang;
   pathEs: string;
@@ -41,6 +42,7 @@ export function buildMetadata({
   description: string;
   image?: string;
   type?: "website" | "article" | "product";
+  keywords?: string[];
 }): Metadata {
   const path = lang === "es" ? pathEs : pathEn;
   const url = `${SITE_URL}${path}`;
@@ -51,6 +53,7 @@ export function buildMetadata({
     metadataBase: new URL(SITE_URL),
     title,
     description,
+    keywords,
     alternates: {
       canonical: url,
       languages: {

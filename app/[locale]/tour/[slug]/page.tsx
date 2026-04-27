@@ -27,10 +27,20 @@ export async function generateMetadata({
     lang: locale,
     pathEs: `/es/tour/${slug}`,
     pathEn: `/en/tour/${slug}`,
-    title: `${exp.name[locale]} · ${zone.name[locale]} | BePelican`,
-    description: exp.hook[locale],
+    title:
+      locale === "es"
+        ? `${exp.name[locale]} en ${zone.name[locale]} | Tour de turismo comunitario en Colombia | BePelican`
+        : `${exp.name[locale]} in ${zone.name[locale]} | Community tourism tour in Colombia | BePelican`,
+    description:
+      locale === "es"
+        ? `${exp.hook[locale]} Reserva esta experiencia en ${zone.name[locale]} y viaja por Colombia con comunidades locales.`
+        : `${exp.hook[locale]} Book this experience in ${zone.name[locale]} and travel Colombia with local communities.`,
     image: exp.image,
     type: "product",
+    keywords:
+      locale === "es"
+        ? [exp.name[locale], `tour en ${zone.name[locale]}`, "turismo comunitario en Colombia", "experiencia auténtica en Colombia"]
+        : [exp.name[locale], `tour in ${zone.name[locale]}`, "community tourism in Colombia", "authentic experience in Colombia"],
   });
 }
 

@@ -5,14 +5,17 @@ import { FiltersBar, type Filters } from "@/components/FiltersBar";
 import { Seo } from "@/components/Seo";
 import { Button } from "@/components/ui/button";
 import { EXPERIENCES } from "@/data/experiences";
-import { useLang } from "@/hooks/useLang";
+import { Link } from "react-router-dom";
+import { useLang, useLocalizedPath } from "@/hooks/useLang";
 
 const DEFAULT_FILTERS: Filters = { zone: "all", theme: "all", duration: "all", price: "all", search: "" };
 
 export default function Destinations() {
   const { t } = useTranslation();
   const lang = useLang();
+  const lp = useLocalizedPath();
   const [filters, setFilters] = useState<Filters>(DEFAULT_FILTERS);
+  const guideHighlights = t("destinations.guideHighlights", { returnObjects: true }) as string[];
 
   const filtered = useMemo(() => {
     return EXPERIENCES.filter(e => {
@@ -41,14 +44,36 @@ export default function Destinations() {
   return (
     <>
       <Seo
-        title={lang === "es" ? "Destinos & Experiencias en Colombia | BePelican" : "Destinations & Experiences in Colombia | BePelican"}
-        description={lang === "es" ? "Explora todas las experiencias de turismo comunitario en Colombia: Amazonas, Guajira, Sierra Nevada, Medellín, Bogotá y más." : "Explore all community tourism experiences in Colombia: Amazon, Guajira, Sierra Nevada, Medellín, Bogotá and more."}
+        title={lang === "es" ? "Tours y Experiencias de Turismo Comunitario en Colombia | BePelican" : "Community Tourism Tours & Experiences in Colombia | BePelican"}
+        description={lang === "es" ? "Descubre tours y experiencias de turismo comunitario en Colombia: Amazonas, Guajira, Sierra Nevada, Medellín, Bogotá y más, con comunidades locales." : "Discover community tourism tours and experiences in Colombia: Amazon, Guajira, Sierra Nevada, Medellin, Bogota and more, designed with local communities."}
         path={`/${lang}/destinos`}
       />
       <section className="container py-12 md:py-16">
         <div className="max-w-3xl mb-10">
           <h1 className="text-5xl md:text-6xl mb-4 text-balance">{t("destinations.title")}</h1>
           <p className="text-lg text-muted-foreground">{t("destinations.subtitle")}</p>
+        </div>
+
+        <div className="mb-10 rounded-2xl border border-border bg-muted/30 p-6 md:p-8">
+          <h2 className="text-2xl md:text-3xl mb-3">{t("destinations.guideTitle")}</h2>
+          <p className="text-muted-foreground leading-relaxed mb-4">{t("destinations.guideBody")}</p>
+          <ul className="space-y-3 mb-4">
+            {guideHighlights.map((item) => (
+              <li key={item} className="flex items-start gap-3 text-muted-foreground">
+                <span className="mt-2 h-2 w-2 rounded-full bg-primary shrink-0" />
+                <span><strong className="text-foreground">{item}</strong></span>
+              </li>
+            ))}
+          </ul>
+          <p className="text-sm text-muted-foreground">
+            <Link to={lp("tematicas")} className="font-semibold text-primary hover:underline">
+              {t("destinations.themesLink")}
+            </Link>{" "}
+            ·{" "}
+            <Link to={lp("contacto")} className="font-semibold text-primary hover:underline">
+              {t("destinations.contactLink")}
+            </Link>
+          </p>
         </div>
 
         <FiltersBar value={filters} onChange={setFilters} onClear={() => setFilters(DEFAULT_FILTERS)} />

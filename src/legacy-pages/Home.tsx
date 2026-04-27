@@ -19,6 +19,7 @@ export default function Home() {
     .map(slug => EXPERIENCES.find(e => e.slug === slug))
     .filter((e): e is NonNullable<typeof e> => Boolean(e));
   const steps = t("home.howSteps", { returnObjects: true }) as { title: string; body: string }[];
+  const highlights = t("home.introHighlights", { returnObjects: true }) as string[];
   const stepIcons = [Compass, Sparkles, MessageCircle];
 
   return (
@@ -43,7 +44,13 @@ export default function Home() {
 
       {/* Hero */}
       <section className="relative -mt-20 min-h-[92vh] flex items-end overflow-hidden">
-        <img src={heroImg} alt="" width={1920} height={1080} className="absolute inset-0 h-full w-full object-cover" />
+        <img
+          src={heroImg}
+          alt={lang === "es" ? "Turismo comunitario en Colombia con comunidades locales y experiencias auténticas" : "Community tourism in Colombia with local communities and authentic experiences"}
+          width={1920}
+          height={1080}
+          className="absolute inset-0 h-full w-full object-cover"
+        />
         <div className="absolute inset-0 bg-gradient-hero" />
         <div className="relative container pb-24 pt-40 text-primary-foreground">
           <p className="inline-block bg-background/15 backdrop-blur px-3 py-1 rounded-full text-xs uppercase tracking-widest font-semibold mb-6 animate-float-up">
@@ -70,6 +77,25 @@ export default function Home() {
       <section className="container my-24 max-w-3xl text-center">
         <h2 className="text-4xl md:text-5xl mb-6 text-balance">{t("home.introTitle")}</h2>
         <p className="text-lg text-muted-foreground leading-relaxed">{t("home.introBody")}</p>
+        <ul className="mt-8 space-y-3 text-left">
+          {highlights.map((item) => (
+            <li key={item} className="flex items-start gap-3 text-muted-foreground">
+              <span className="mt-2 h-2 w-2 rounded-full bg-primary shrink-0" />
+              <span><strong className="text-foreground">{item.split(" ")[0]}</strong> {item.slice(item.indexOf(" ") + 1)}</span>
+            </li>
+          ))}
+        </ul>
+        <p className="mt-8 text-base text-muted-foreground leading-relaxed">
+          {t("home.internalLinksLead")}{" "}
+          <Link to={lp("tematicas")} className="font-semibold text-primary hover:underline">
+            {t("home.internalLinksThemes")}
+          </Link>{" "}
+          {t("home.internalLinksSeparator")}{" "}
+          <Link to={lp("contacto")} className="font-semibold text-primary hover:underline">
+            {t("home.internalLinksContact")}
+          </Link>
+          .
+        </p>
       </section>
 
       {/* Featured */}
@@ -80,7 +106,7 @@ export default function Home() {
             <p className="text-muted-foreground">{t("home.featuredSubtitle")}</p>
           </div>
           <Button asChild variant="outline">
-            <Link to={lp("destinos")}>{t("nav.destinations")} →</Link>
+            <Link to={lp("destinos")}>{t("home.featuredCta")} →</Link>
           </Button>
         </div>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">

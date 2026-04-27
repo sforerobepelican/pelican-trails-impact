@@ -22,6 +22,11 @@ export function ExperienceCard({ experience: e, className }: Props) {
   return (
     <Link
       to={lp(`tour/${e.slug}`)}
+      aria-label={
+        lang === "es"
+          ? `Ver ${e.name[lang]}, experiencia de turismo comunitario en ${zone.name[lang]}`
+          : `View ${e.name[lang]}, a community tourism experience in ${zone.name[lang]}`
+      }
       className={cn(
         "group relative flex flex-col overflow-hidden rounded-2xl bg-card shadow-soft hover:shadow-card transition-smooth",
         className
@@ -30,7 +35,11 @@ export function ExperienceCard({ experience: e, className }: Props) {
       <div className="relative aspect-[4/3] overflow-hidden bg-muted">
         <img
           src={e.image}
-          alt={e.name[lang]}
+          alt={
+            lang === "es"
+              ? `${e.name[lang]} en ${zone.name[lang]}, ${mainTheme.name[lang].toLowerCase()} y turismo comunitario en Colombia`
+              : `${e.name[lang]} in ${zone.name[lang]}, ${mainTheme.name[lang].toLowerCase()} and community tourism in Colombia`
+          }
           loading="lazy"
           width={800}
           height={600}

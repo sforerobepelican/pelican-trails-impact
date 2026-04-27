@@ -23,8 +23,8 @@ export default function ExperienceDetail() {
   return (
     <>
       <Seo
-        title={`${e.name[lang]} · ${zone.name[lang]} | BePelican`}
-        description={e.hook[lang]}
+        title={lang === "es" ? `${e.name[lang]} en ${zone.name[lang]} | Tour de turismo comunitario en Colombia | BePelican` : `${e.name[lang]} in ${zone.name[lang]} | Community tourism tour in Colombia | BePelican`}
+        description={lang === "es" ? `${e.hook[lang]} Reserva esta experiencia en ${zone.name[lang]} y viaja por Colombia con comunidades locales.` : `${e.hook[lang]} Book this experience in ${zone.name[lang]} and travel Colombia with local communities.`}
         path={`/${lang}/tour/${e.slug}`}
         image={e.image}
         type="product"
@@ -43,7 +43,13 @@ export default function ExperienceDetail() {
       {/* Hero */}
       <section className="relative">
         <div className="relative h-[60vh] md:h-[70vh] overflow-hidden">
-          <img src={e.image} alt={e.name[lang]} width={1920} height={1080} className="absolute inset-0 h-full w-full object-cover" />
+          <img
+            src={e.image}
+            alt={lang === "es" ? `${e.name[lang]} en ${zone.name[lang]}, experiencia de turismo comunitario en Colombia` : `${e.name[lang]} in ${zone.name[lang]}, a community tourism experience in Colombia`}
+            width={1920}
+            height={1080}
+            className="absolute inset-0 h-full w-full object-cover"
+          />
           <div className="absolute inset-0 bg-gradient-to-t from-secondary via-secondary/40 to-transparent" />
         </div>
         <div className="container -mt-32 relative z-10">
@@ -63,6 +69,11 @@ export default function ExperienceDetail() {
             </div>
             <h1 className="text-4xl md:text-6xl mb-4 text-balance">{e.name[lang]}</h1>
             <p className="text-lg text-muted-foreground mb-6">{e.hook[lang]}</p>
+            <p className="text-base text-muted-foreground leading-relaxed max-w-4xl">
+              {lang === "es"
+                ? `Este tour en ${zone.name[lang]} combina ${e.themes.map((th) => THEMES[th].name[lang].toLowerCase()).join(", ")} con impacto local real para que vivas una experiencia auténtica de turismo comunitario en Colombia.`
+                : `This tour in ${zone.name[lang]} combines ${e.themes.map((th) => THEMES[th].name[lang].toLowerCase()).join(", ")} with real local impact so you can enjoy an authentic community tourism experience in Colombia.`}
+            </p>
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 pt-6 border-t border-border">
               <div>
@@ -305,14 +316,18 @@ export default function ExperienceDetail() {
 
         <aside className="lg:sticky lg:top-28 h-fit space-y-4">
           <div className="rounded-2xl bg-card border border-border shadow-card p-6">
-            <h3 className="text-2xl mb-2">{t("experience.bookCta")}</h3>
+            <h2 className="text-2xl mb-2">
+              {lang === "es" ? `Reserva ${e.name[lang]}` : `Book ${e.name[lang]}`}
+            </h2>
             <p className="text-sm text-muted-foreground mb-5">{t("contact.subtitle")}</p>
             <Button asChild size="lg" className="w-full mb-2">
-              <Link to={lp("contacto")}>{t("experience.bookCta")}</Link>
+              <Link to={lp("contacto")}>
+                {lang === "es" ? `Solicitar reserva de ${e.name[lang]}` : `Request booking for ${e.name[lang]}`}
+              </Link>
             </Button>
             <Button asChild size="lg" variant="outline" className="w-full">
               <a href={`https://wa.me/573135525944?text=${encodeURIComponent(`Hola, me interesa la experiencia: ${e.name[lang]}`)}`} target="_blank" rel="noopener noreferrer">
-                {t("experience.contactCta")}
+                {lang === "es" ? `Hablar por WhatsApp sobre ${e.name[lang]}` : `Ask on WhatsApp about ${e.name[lang]}`}
               </a>
             </Button>
           </div>

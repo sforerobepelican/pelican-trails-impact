@@ -20,12 +20,16 @@ export async function generateMetadata({
     pathEn: "/en",
     title:
       locale === "es"
-        ? "Turismo Comunitario en Colombia · Experiencias Auténticas | BePelican"
-        : "Community Tourism in Colombia · Authentic Experiences | BePelican",
+        ? "Turismo Comunitario en Colombia | Tours y Experiencias Auténticas | BePelican"
+        : "Community Tourism in Colombia | Authentic Tours & Experiences | BePelican",
     description:
       locale === "es"
-        ? "Viaja por Colombia con propósito. BePelican conecta viajeros con comunidades locales en experiencias de turismo transformador. Reserva tu próxima aventura."
-        : "Travel Colombia with purpose. BePelican connects travelers with local communities through transformative tourism experiences. Book your next adventure.",
+        ? "Descubre tours y experiencias de turismo comunitario en Colombia. Viaja con propósito, conecta con comunidades locales y reserva una aventura auténtica con impacto real."
+        : "Discover community tourism tours and experiences in Colombia. Travel with purpose, connect with local communities and book an authentic adventure with real impact.",
+    keywords:
+      locale === "es"
+        ? ["turismo comunitario en Colombia", "tours en Colombia", "experiencias auténticas en Colombia", "viajes con propósito", "comunidades locales Colombia"]
+        : ["community tourism in Colombia", "tours in Colombia", "authentic experiences in Colombia", "purposeful travel Colombia", "local communities Colombia"],
   });
 }
 

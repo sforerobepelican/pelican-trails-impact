@@ -26,6 +26,7 @@ export default function Contact() {
   const supabase = createClient();
   const [form, setForm] = useState({ name: "", email: "", whatsapp: "", message: "" });
   const [submitting, setSubmitting] = useState(false);
+  const planningHighlights = t("contact.planningHighlights", { returnObjects: true }) as string[];
 
   const onSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -60,8 +61,8 @@ export default function Contact() {
   return (
     <>
       <Seo
-        title={lang === "es" ? "Contacto · Diseña tu viaje | BePelican" : "Contact · Design your trip | BePelican"}
-        description={lang === "es" ? "Cuéntanos sobre tu viaje a Colombia. Te respondemos en menos de 24 horas." : "Tell us about your trip to Colombia. We reply within 24 hours."}
+        title={lang === "es" ? "Planear Viaje a Colombia con Turismo Comunitario | BePelican" : "Plan a Community Tourism Trip to Colombia | BePelican"}
+        description={lang === "es" ? "Habla con BePelican para diseñar tours y experiencias auténticas en Colombia con comunidades locales. Respuesta en menos de 24 horas." : "Talk to BePelican to design tours and authentic experiences in Colombia with local communities. Reply within 24 hours."}
         path={`/${lang}/contacto`}
       />
       <section className="container py-12 md:py-20 max-w-5xl">
@@ -69,6 +70,16 @@ export default function Contact() {
           <div className="lg:col-span-2">
             <h1 className="text-5xl md:text-6xl mb-4 text-balance">{t("contact.title")}</h1>
             <p className="text-lg text-muted-foreground mb-8">{t("contact.subtitle")}</p>
+            <h2 className="text-2xl mb-3">{t("contact.planningTitle")}</h2>
+            <p className="text-muted-foreground leading-relaxed mb-5">{t("contact.planningBody")}</p>
+            <ul className="space-y-3 mb-8">
+              {planningHighlights.map((item) => (
+                <li key={item} className="flex items-start gap-3 text-muted-foreground">
+                  <span className="mt-2 h-2 w-2 rounded-full bg-primary shrink-0" />
+                  <span><strong className="text-foreground">{item}</strong></span>
+                </li>
+              ))}
+            </ul>
 
             <div className="space-y-4">
               <a href={`https://wa.me/${WHATSAPP_NUMBER}`} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 p-4 rounded-xl bg-card border border-border hover:border-primary transition-smooth">

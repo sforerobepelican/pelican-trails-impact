@@ -20,12 +20,16 @@ export async function generateMetadata({
     pathEn: "/en/contact",
     title:
       locale === "es"
-        ? "Contacto · Diseña tu viaje | BePelican"
-        : "Contact · Design your trip | BePelican",
+        ? "Planear Viaje a Colombia con Turismo Comunitario | BePelican"
+        : "Plan a Community Tourism Trip to Colombia | BePelican",
     description:
       locale === "es"
-        ? "Cuéntanos sobre tu viaje a Colombia. Te respondemos en menos de 24 horas."
-        : "Tell us about your trip to Colombia. We reply within 24 hours.",
+        ? "Habla con BePelican para diseñar tours y experiencias auténticas en Colombia con comunidades locales. Respuesta en menos de 24 horas."
+        : "Talk to BePelican to design tours and authentic experiences in Colombia with local communities. Reply within 24 hours.",
+    keywords:
+      locale === "es"
+        ? ["planear viaje a Colombia", "agencia de turismo comunitario", "viaje a medida Colombia", "reservar tours en Colombia"]
+        : ["plan a trip to Colombia", "community tourism agency", "custom trip Colombia", "book tours in Colombia"],
   });
 }
 
