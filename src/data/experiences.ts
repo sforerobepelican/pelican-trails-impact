@@ -133,42 +133,42 @@ export const THEMES: Record<ThemeId, { name: { es: string; en: string }; tagline
   adventure: {
     name: { es: "Aventura & Outdoor", en: "Adventure & Outdoor" },
     tagline: { es: "Glaciares, selva y alta montaña.", en: "Glaciers, jungle and high mountains." },
-    image: "/src/assets/theme-adventure.jpg",
+    image: "/theme-adventure.jpg",
   },
   ecotourism: {
     name: { es: "Ecoturismo & Vida Silvestre", en: "Ecotourism & Wildlife" },
     tagline: { es: "Delfines, cóndores, biodiversidad única.", en: "Dolphins, condors, unique biodiversity." },
-    image: "/src/assets/theme-eco.jpg",
+    image: "/theme-eco.jpg",
   },
   ancestral: {
     name: { es: "Cultura Ancestral & Comunidades", en: "Ancestral Culture & Communities" },
     tagline: { es: "Acceso real a comunidades indígenas.", en: "Real access to indigenous communities." },
-    image: "/src/assets/theme-ancestral.jpg",
+    image: "/theme-ancestral.jpg",
   },
   "urban-memory": {
     name: { es: "Arte Urbano, Memoria & Resiliencia", en: "Urban Art, Memory & Resilience" },
     tagline: { es: "Comuna 13, La Perse, Ciudad Bolívar.", en: "Comuna 13, La Perse, Ciudad Bolívar." },
-    image: "/src/assets/theme-urban.jpg",
+    image: "/theme-urban.jpg",
   },
   flavors: {
     name: { es: "Sabores & Mercados Locales", en: "Flavors & Local Markets" },
     tagline: { es: "Café de origen y cocina viva.", en: "Origin coffee and living cuisine." },
-    image: "/src/assets/theme-flavors.jpg",
+    image: "/theme-flavors.jpg",
   },
   heritage: {
     name: { es: "Patrimonio & Misticismo", en: "Heritage & Mysticism" },
     tagline: { es: "Catedral de Sal, Ciudad Perdida, Monserrate.", en: "Salt Cathedral, Lost City, Monserrate." },
-    image: "/src/assets/theme-heritage.jpg",
+    image: "/theme-heritage.jpg",
   },
   postcard: {
     name: { es: "Postales & Caribe", en: "Postcards & Caribbean" },
     tagline: { es: "Cabo de la Vela, Guatapé, embalses.", en: "Cabo de la Vela, Guatapé, lakes." },
-    image: "/src/assets/theme-postcard.jpg",
+    image: "/theme-postcard.jpg",
   },
   express: {
     name: { es: "Escapadas Express", en: "Express Escapes" },
     tagline: { es: "Full days desde Bogotá y Medellín.", en: "Full days from Bogotá and Medellín." },
-    image: "/src/assets/theme-express.jpg",
+    image: "/theme-express.jpg",
   },
 };
 
